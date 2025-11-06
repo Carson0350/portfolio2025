@@ -35,6 +35,7 @@
 **Type:** Server Component (static content)
 
 **Data Loading:**
+
 ```typescript
 // Load projects at build time
 const projects = await getProjects({ featured: true });
@@ -43,6 +44,7 @@ projects.sort((a, b) => new Date(b.date) - new Date(a.date));
 ```
 
 **Grid Layout (Tailwind):**
+
 ```tsx
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   {projects.map((project) => (
@@ -52,6 +54,7 @@ projects.sort((a, b) => new Date(b.date) - new Date(a.date));
 ```
 
 **Dependencies:**
+
 - Requires Story 3.2 (Markdown parsing utilities)
 - Requires Story 6.2 (ProjectCard component)
 
@@ -62,6 +65,7 @@ projects.sort((a, b) => new Date(b.date) - new Date(a.date));
 See `docs/front-end-spec.md` - Wireframes & Mockups - Section 4: Projects Section (Grid View)
 
 **Design Requirements:**
+
 - Container max-width: 1400px
 - Gap between cards: 32px
 - Fade-in animation on scroll (Intersection Observer)

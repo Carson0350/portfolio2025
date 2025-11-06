@@ -9,6 +9,7 @@ I want to ensure WCAG 2.1 AA compliance,
 so that the portfolio is accessible to all users including those with disabilities.
 
 **Acceptance Criteria:**
+
 1. Automated accessibility audit run using axe DevTools
 2. Manual testing with screen readers (VoiceOver on macOS, NVDA on Windows)
 3. Keyboard navigation tested for all interactive elements
@@ -24,6 +25,7 @@ I want to test the portfolio across browsers and devices,
 so that all users have a consistent, high-quality experience.
 
 **Acceptance Criteria:**
+
 1. Testing completed on Chrome, Firefox, Safari, Edge (latest 2 versions)
 2. Mobile testing on iOS Safari and Chrome Mobile
 3. Responsive design verified at breakpoints: 375px, 768px, 1024px, 1920px
@@ -39,6 +41,7 @@ I want to test all portfolio features end-to-end,
 so that everything works correctly before launch.
 
 **Acceptance Criteria:**
+
 1. Navigation: All links work, smooth scrolling functions, active states update
 2. Hero section: CTA button scrolls to contact, animations play correctly
 3. About section: Bio content renders, hobbies display properly
@@ -54,6 +57,7 @@ I want all content reviewed for accuracy and professionalism,
 so that the portfolio represents me well.
 
 **Acceptance Criteria:**
+
 1. Bio content proofread for grammar, spelling, tone
 2. Project case studies reviewed for accuracy and clarity
 3. Experience descriptions verified against resume
@@ -69,6 +73,7 @@ I want the portfolio accessible at a custom domain,
 so that it looks professional and is easy to share.
 
 **Acceptance Criteria:**
+
 1. Domain purchased (carsonantoine.com or alternative)
 2. Domain configured in Vercel project settings
 3. DNS records updated to point to Vercel
@@ -84,6 +89,7 @@ I want comprehensive documentation,
 so that the portfolio can be maintained and updated easily.
 
 **Acceptance Criteria:**
+
 1. README.md created with project overview, setup instructions, and deployment guide
 2. Content update guide documented (how to add projects, update bio, etc.)
 3. Environment variables documented in .env.example
@@ -99,6 +105,7 @@ I want to conduct a final review before launch,
 so that I'm confident the portfolio is ready for public viewing.
 
 **Acceptance Criteria:**
+
 1. All epics completed and stories verified
 2. Lighthouse audit shows 95+ scores across all categories
 3. Accessibility audit passes with no critical issues

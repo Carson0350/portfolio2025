@@ -36,6 +36,7 @@ The portfolio should embody **"Confident Minimalism"** - a clean, modern aesthet
 ## Branding
 
 **Professional Developer Aesthetic:**
+
 - **Color Palette:** Modern, professional scheme - dark navy/blue primary, accent color for CTAs (teal/green), neutral grays for text hierarchy
 - **Typography:** Clean, readable sans-serif for body (Inter, Outfit, or similar), possibly monospace for code snippets or technical elements
 - **Imagery:** High-quality, professional photos and graphics - no stock photo clichés

@@ -1,4 +1,5 @@
 # Carson Antoine - Professional Portfolio Site
+
 ## Fullstack Architecture Document
 
 **Version:** 1.0  
@@ -19,6 +20,7 @@ This unified approach combines what would traditionally be separate backend and 
 **Decision: Greenfield Next.js 14 Project (No Starter Template)**
 
 **Rationale:**
+
 - PRD specifies Next.js 14.2+ with App Router (latest features)
 - Custom design system required ("Confident Minimalism")
 - Specific tech stack already defined (shadcn/ui, Tailwind, Framer Motion)
@@ -26,12 +28,14 @@ This unified approach combines what would traditionally be separate backend and 
 - Using `create-next-app` with TypeScript provides clean foundation
 
 **No starter template needed because:**
+
 1. Portfolio is straightforward (no auth, no database, no complex state)
 2. shadcn/ui provides component foundation without template lock-in
 3. Vercel deployment is zero-config for Next.js
 4. Custom design requirements make templates constraining
 
 **Alternative Considered:**
+
 - T3 Stack (Next.js + tRPC + Prisma + NextAuth) - **Rejected:** Overkill, includes database/auth we don't need
 - Vercel Portfolio Template - **Rejected:** Generic design, would require extensive customization
 
@@ -39,9 +43,9 @@ This unified approach combines what would traditionally be separate backend and 
 
 ### Change Log
 
-| Date | Version | Description | Author |
-|------|---------|-------------|--------|
-| 2025-11-05 | 1.0 | Initial architecture document creation | Winston (Architect) |
+| Date       | Version | Description                            | Author              |
+| ---------- | ------- | -------------------------------------- | ------------------- |
+| 2025-11-05 | 1.0     | Initial architecture document creation | Winston (Architect) |
 
 ---
 
@@ -60,6 +64,7 @@ This architecture achieves the PRD's ambitious performance goals (Lighthouse 95+
 **Platform:** Vercel ⭐ (Recommended)
 
 **Rationale:**
+
 - Zero-config Next.js deployment (built by Next.js creators)
 - Automatic SSL, CDN, global edge network
 - Preview deployments for every git push
@@ -68,6 +73,7 @@ This architecture achieves the PRD's ambitious performance goals (Lighthouse 95+
 - Optimal Next.js performance and optimization
 
 **Key Services:**
+
 - Vercel Edge Network (CDN)
 - Vercel Serverless Functions (API routes)
 - Vercel Analytics (Web Vitals tracking)
@@ -76,6 +82,7 @@ This architecture achieves the PRD's ambitious performance goals (Lighthouse 95+
 **Deployment Host and Regions:** Global edge network (automatic), primary region: US East
 
 **Alternatives Considered:**
+
 - AWS (Amplify + S3 + CloudFront) - Rejected: Complex setup, higher cost ($5-20/month)
 - Netlify - Rejected: Less optimized Next.js support
 
@@ -116,12 +123,14 @@ portfolio/
 ## Technology Stack
 
 ### Core Framework
+
 - **Next.js 14.2+** - Full-stack React framework (App Router, Server Components, API Routes)
 - **React 18+** - UI library
 - **TypeScript 5.0+** - Type-safe JavaScript (strict mode)
 - **Node.js 18+** - Runtime environment
 
 ### Frontend Stack
+
 - **Tailwind CSS 3.4+** - Utility-first CSS, custom design tokens
 - **shadcn/ui** - Accessible component library (Radix UI primitives)
 - **Lucide React** - Icon library (2px stroke, tree-shakeable)
@@ -132,16 +141,19 @@ portfolio/
 - **react-markdown** - Render markdown content
 
 ### Backend Stack
+
 - **Next.js API Routes** - Serverless endpoints
 - **Resend** - Email delivery (100 emails/day free tier)
 - **Upstash Redis** - Edge-based rate limiting (3 submissions/IP/hour)
 
 ### Analytics & Monitoring
+
 - **Plausible Analytics** (recommended) or **Google Analytics 4** - Web analytics
 - **Vercel Analytics** - Web Vitals monitoring (built-in)
 - **Sentry** (optional) - Error tracking
 
 ### Development Tools
+
 - **ESLint** - Linting (Next.js config + custom rules)
 - **Prettier** - Code formatting
 - **Husky + lint-staged** - Git hooks (pre-commit checks)
@@ -150,6 +162,7 @@ portfolio/
 - **@next/bundle-analyzer** - Bundle size analysis
 
 ### Estimated Bundle Size
+
 **~200KB initial JavaScript** (within target)
 
 ---
@@ -186,6 +199,7 @@ components/
 **Server Components (Default):** All sections are Server Components (zero JavaScript, faster load, better SEO)
 
 **Client Components:** Only when needed (`"use client"` directive)
+
 - ContactForm (form state, API calls)
 - Navigation (mobile menu, scroll detection)
 - ProjectDetail (modal, animations)
@@ -243,6 +257,7 @@ components/
 **Response:** Success (200), Validation Error (400), Rate Limit (429), Server Error (500)
 
 **Flow:**
+
 1. Rate limiting check (Upstash Redis)
 2. Validate input (Zod schema)
 3. Send email (Resend API)
@@ -251,16 +266,19 @@ components/
 ### External Services
 
 **Resend (Email):**
+
 - Send contact form to carson.workflow@gmail.com
 - Free tier: 100 emails/day
 - Env: `RESEND_API_KEY`
 
 **Upstash Redis (Rate Limiting):**
+
 - 3 submissions per IP per hour
 - Edge-based, serverless
 - Env: `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`
 
 **Analytics:**
+
 - Plausible (recommended) or Google Analytics 4
 - Vercel Analytics (Web Vitals, built-in)
 
@@ -269,11 +287,13 @@ components/
 **Markdown Files:** `content/bio/`, `content/projects/`
 
 **Build-time Processing:**
+
 - gray-matter (parse frontmatter)
 - Zod validation (type-safe)
 - Static generation (Next.js)
 
 **Schema Example:**
+
 ```typescript
 const ProjectSchema = z.object({
   title: z.string(),
@@ -289,6 +309,7 @@ const ProjectSchema = z.object({
 ## Security & Performance
 
 ### Security
+
 - **CSP Headers:** Content Security Policy via Next.js middleware
 - **Rate Limiting:** Upstash Redis (3 req/IP/hour)
 - **Input Validation:** Zod schemas (client + server)
@@ -296,6 +317,7 @@ const ProjectSchema = z.object({
 - **HTTPS:** Automatic via Vercel
 
 ### Performance
+
 - **Static Generation:** All pages pre-rendered at build time
 - **Edge Caching:** Vercel CDN, global distribution
 - **Image Optimization:** Next.js Image (WebP, responsive)
@@ -303,6 +325,7 @@ const ProjectSchema = z.object({
 - **Bundle Size:** Target < 200KB initial JS
 
 ### Monitoring
+
 - Vercel Analytics (Web Vitals)
 - Lighthouse CI (optional)
 - Sentry (error tracking, optional)
@@ -319,6 +342,7 @@ const ProjectSchema = z.object({
 **Dev Command:** `next dev`
 
 **Environment Variables:**
+
 ```
 RESEND_API_KEY=re_xxxxx
 UPSTASH_REDIS_REST_URL=https://xxxxx.upstash.io
@@ -327,6 +351,7 @@ NEXT_PUBLIC_PLAUSIBLE_DOMAIN=carsonantoine.com (optional)
 ```
 
 **Deployment Flow:**
+
 1. Push to GitHub main branch
 2. Vercel auto-builds and deploys
 3. Preview deployments for PRs
@@ -337,4 +362,3 @@ NEXT_PUBLIC_PLAUSIBLE_DOMAIN=carsonantoine.com (optional)
 **Document Status:** ✅ Complete - Ready for Development  
 **Next Agent:** @dev for implementation  
 **Last Updated:** November 5, 2025
-

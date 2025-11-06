@@ -30,11 +30,13 @@
 ## Technical Notes
 
 **Dependencies:**
+
 ```bash
 npm install -D eslint prettier husky lint-staged @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
 **Package.json scripts:**
+
 ```json
 "scripts": {
   "lint": "next lint",

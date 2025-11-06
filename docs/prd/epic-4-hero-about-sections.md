@@ -9,6 +9,7 @@ I want to see an impactful hero section when I land on the portfolio,
 so that I immediately understand Carson's value proposition and expertise.
 
 **Acceptance Criteria:**
+
 1. Hero component created with full-viewport height and centered content
 2. Headline displays: "Senior Full-Stack Engineer specializing in .NET/React/Azure"
 3. Subheadline provides brief context (e.g., "Building scalable, performant web applications")
@@ -24,6 +25,7 @@ I want subtle animations in the hero section,
 so that the portfolio feels polished and modern.
 
 **Acceptance Criteria:**
+
 1. Framer Motion installed and configured
 2. Fade-in animation for headline and subheadline (staggered timing)
 3. Slide-in animation for headshot image
@@ -39,6 +41,7 @@ I want a professional headshot image in the hero section,
 so that visitors can put a face to the name and feel a personal connection.
 
 **Acceptance Criteria:**
+
 1. Professional headshot image sourced (existing photo, new session, or high-quality AI avatar)
 2. Image cropped to appropriate aspect ratio (square or portrait)
 3. Image optimized for web (WebP format, multiple sizes for responsive)
@@ -54,6 +57,7 @@ I want to read Carson's professional bio and career story,
 so that I understand his background, expertise, and what makes him unique.
 
 **Acceptance Criteria:**
+
 1. About section component created with Section and Container layout
 2. Section heading: "About Me" or similar
 3. Bio content loaded from `/content/bio/about.md`
@@ -69,6 +73,7 @@ I want to render markdown bio content with proper styling,
 so that the About section displays formatted text beautifully.
 
 **Acceptance Criteria:**
+
 1. Markdown rendering library installed (react-markdown or similar)
 2. Bio content from `/content/bio/about.md` parsed and rendered
 3. Custom styling applied to markdown elements (paragraphs, links, lists)
@@ -84,6 +89,7 @@ I want to see Carson's personality and interests,
 so that I get a sense of who he is beyond his technical skills.
 
 **Acceptance Criteria:**
+
 1. Hobbies/interests section added (Hiking, Camping, Snow Skiing, Video Games, Disc Golf, F1)
 2. Icons or visual elements represent each hobby (Lucide React icons)
 3. Optional: "Fun Facts" or "When I'm Not Coding" subsection

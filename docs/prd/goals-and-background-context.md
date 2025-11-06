@@ -21,8 +21,8 @@ The portfolio website will serve dual purposes: it showcases Carson's work while
 
 ## Change Log
 
-| Date | Version | Description | Author |
-|------|---------|-------------|--------|
-| 2025-11-05 | 1.0 | Initial PRD creation from Project Brief | John (PM) |
+| Date       | Version | Description                             | Author    |
+| ---------- | ------- | --------------------------------------- | --------- |
+| 2025-11-05 | 1.0     | Initial PRD creation from Project Brief | John (PM) |
 
 ---

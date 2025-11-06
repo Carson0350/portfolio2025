@@ -9,6 +9,7 @@ I want to define design system tokens (colors, typography, spacing, breakpoints)
 so that the portfolio has consistent visual styling across all components.
 
 **Acceptance Criteria:**
+
 1. Tailwind config extended with custom color palette (primary, accent, neutral shades)
 2. Typography scale defined (font sizes, line heights, font weights)
 3. Spacing scale customized for portfolio needs
@@ -24,6 +25,7 @@ I want to see a fixed navigation header with section links,
 so that I can easily navigate to different parts of the portfolio.
 
 **Acceptance Criteria:**
+
 1. Navigation component created with logo/name and section links (About, Skills, Projects, Experience, Contact)
 2. Fixed/sticky positioning that remains visible during scroll
 3. Smooth scroll behavior when clicking navigation links
@@ -39,6 +41,7 @@ I want to see a footer with social links and copyright information,
 so that I can connect with Carson on other platforms.
 
 **Acceptance Criteria:**
+
 1. Footer component created with social media links (LinkedIn, GitHub, Email)
 2. Social icons implemented using Lucide React
 3. Copyright notice with current year (dynamically generated)
@@ -54,6 +57,7 @@ I want reusable layout components (Container, Section),
 so that all page sections have consistent spacing and responsive behavior.
 
 **Acceptance Criteria:**
+
 1. `Container` component created with max-width and responsive padding
 2. `Section` component created with consistent vertical spacing
 3. Components accept children and className props for flexibility
@@ -69,6 +73,7 @@ I want a flexible Card component for displaying content blocks,
 so that projects, skills, and experience can be presented consistently.
 
 **Acceptance Criteria:**
+
 1. Card component created extending shadcn/ui Card with custom styling
 2. Variants supported: default, elevated (with shadow), bordered
 3. Optional header, content, and footer slots
@@ -84,6 +89,7 @@ I want reusable typography components (Heading, Text, Link),
 so that text styling is consistent and semantic across the portfolio.
 
 **Acceptance Criteria:**
+
 1. `Heading` component created with variants (h1, h2, h3, h4)
 2. `Text` component created with variants (body, small, large, muted)
 3. `Link` component created with hover states and external link handling
@@ -99,6 +105,7 @@ I want a responsive grid utility,
 so that I can create multi-column layouts that adapt to screen sizes.
 
 **Acceptance Criteria:**
+
 1. Grid component created using CSS Grid with Tailwind utilities
 2. Responsive column counts: 1 col (mobile), 2 cols (tablet), 3+ cols (desktop)
 3. Consistent gap spacing between grid items

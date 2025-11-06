@@ -62,6 +62,7 @@ See PRD: `docs/prd/epic-1-*.md` - Story 1.1
 ## Dev Agent Record
 
 ### Files Created
+
 - `app/layout.tsx` - Root layout with metadata
 - `app/page.tsx` - Home page component
 - `app/globals.css` - Global styles with Tailwind directives
@@ -73,6 +74,7 @@ See PRD: `docs/prd/epic-1-*.md` - Story 1.1
 - `package-lock.json` - Dependency lock file
 
 ### Completion Notes
+
 - Next.js 16.0.1 installed (latest stable)
 - React 19.2.0 installed
 - TypeScript strict mode enabled with `noUncheckedIndexedAccess`

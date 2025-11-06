@@ -30,16 +30,19 @@
 ## Technical Notes
 
 **Command:**
+
 ```bash
 npx create-next-app@latest portfolio --typescript --tailwind --app --src-dir=false --import-alias="@/*"
 ```
 
 **TypeScript Config:**
+
 - Enable `strict: true`
 - Enable `noUncheckedIndexedAccess: true`
 - Set `baseUrl: "."` and `paths: { "@/*": ["./*"] }`
 
 **Dependencies:**
+
 - next@^14.2.0
 - react@^18.2.0
 - react-dom@^18.2.0

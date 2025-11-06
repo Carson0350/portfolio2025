@@ -5,5 +5,5 @@ export default function Home() {
       <p className="mt-4 text-xl">Full Stack Developer Portfolio</p>
       <p className="mt-2 text-gray-600">Coming soon...</p>
     </main>
-  )
+  );
 }

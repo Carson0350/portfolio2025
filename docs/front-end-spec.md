@@ -1,4 +1,5 @@
 # Carson Antoine - Professional Portfolio Site
+
 ## UI/UX Specification
 
 **Version:** 1.0
@@ -17,6 +18,7 @@ This document defines the user experience goals, information architecture, user 
 #### Target User Personas
 
 **Primary Persona: Technical Hiring Manager**
+
 - Senior engineers or engineering managers at tech companies (5-15 years experience)
 - Evaluates 10-50 candidates per position
 - Spends 2-5 minutes on initial portfolio review
@@ -25,6 +27,7 @@ This document defines the user experience goals, information architecture, user 
 - Goals: Identify qualified senior engineers, reduce false positives in interview pipeline
 
 **Secondary Persona: Technical Recruiter**
+
 - Internal or agency recruiters managing multiple open positions
 - May have technical background but not always hands-on developers
 - Needs easy-to-share, scannable candidate profiles
@@ -55,9 +58,9 @@ This document defines the user experience goals, information architecture, user 
 
 ### Change Log
 
-| Date | Version | Description | Author |
-|------|---------|-------------|--------|
-| 2025-11-05 | 1.0 | Initial UI/UX Specification creation | Sally (UX Expert) |
+| Date       | Version | Description                          | Author            |
+| ---------- | ------- | ------------------------------------ | ----------------- |
+| 2025-11-05 | 1.0     | Initial UI/UX Specification creation | Sally (UX Expert) |
 
 ---
 
@@ -107,6 +110,7 @@ graph TD
 ### Navigation Structure
 
 **Primary Navigation:**
+
 - Fixed/sticky header navigation bar with logo/name on left
 - Navigation links: About | Skills | Projects | Experience | Contact
 - Smooth scroll to corresponding section on click
@@ -114,11 +118,13 @@ graph TD
 - Mobile: Hamburger menu (< 768px) with slide-out drawer
 
 **Secondary Navigation:**
+
 - Footer contains duplicate navigation links for convenience
 - "Back to Top" button appears after scrolling past hero section
 - Project detail modal/view has close button to return to grid
 
 **Breadcrumb Strategy:**
+
 - Not applicable for single-page application
 - URL hash updates based on active section (e.g., `#projects`) for sharing specific sections
 - Browser back/forward navigation supported via hash routing
@@ -132,12 +138,14 @@ graph TD
 **User Goal:** Technical hiring manager wants to quickly assess Carson's qualifications and decide whether to proceed with interview process
 
 **Entry Points:**
+
 - Direct URL from job application
 - LinkedIn profile link
 - Recruiter referral
 - Search engine result
 
 **Success Criteria:**
+
 - User understands Carson's expertise within 10 seconds
 - User can quickly scan skills, projects, and experience
 - User finds contact method to reach out
@@ -186,11 +194,13 @@ graph TD
 **User Goal:** User wants to understand Carson's technical depth through detailed project case studies
 
 **Entry Points:**
+
 - From initial review flow (clicked project card)
 - Direct link to specific project (shared URL with hash)
 - Return visit to explore projects in detail
 
 **Success Criteria:**
+
 - User can easily browse multiple projects
 - Project details are comprehensive but scannable
 - User understands problem, solution, and impact
@@ -231,12 +241,14 @@ graph TD
 **User Goal:** User wants to reach out to Carson about an opportunity
 
 **Entry Points:**
+
 - Hero CTA button ("Get In Touch")
 - Navigation link to Contact section
 - Footer contact links
 - After reviewing portfolio content
 
 **Success Criteria:**
+
 - User can choose preferred contact method easily
 - Form submission is quick and error-free
 - User receives clear confirmation of submission
@@ -296,11 +308,13 @@ graph TD
 **Key Elements:**
 
 **Layout (Desktop 1920px):**
+
 - Full viewport height (100vh)
 - Two-column layout: Left (60%) content, Right (40%) headshot image
 - Centered vertically with generous whitespace
 
 **Content (Left Column):**
+
 - Small eyebrow text: "Full-Stack Software Engineer" (14px, uppercase, letter-spacing, muted color)
 - H1 Headline: "Senior Full-Stack Engineer specializing in .NET, React & Azure" (48-56px, bold, primary color)
 - Subheadline: "Building scalable, performant web applications with 5+ years of experience" (20-24px, regular, secondary text color)
@@ -308,11 +322,13 @@ graph TD
 - Secondary text: "Scroll to explore" with down arrow icon (subtle, animated bounce)
 
 **Visual (Right Column):**
+
 - Professional headshot (circular or rounded square, 400-500px)
 - Subtle shadow or border
 - Optional: Floating tech stack icons around image (React, .NET, Azure logos - very subtle)
 
 **Mobile (375px):**
+
 - Single column, stacked layout
 - Headshot smaller (250px), positioned above headline
 - Headline size reduced (32-36px)
@@ -320,6 +336,7 @@ graph TD
 - CTA button full-width or centered
 
 **Interaction Notes:**
+
 - Fade-in animation on load (headline, then subheadline, then CTA - staggered 100ms)
 - CTA button smooth scroll to Contact section
 - Down arrow gentle bounce animation (CSS keyframes)
@@ -336,25 +353,30 @@ graph TD
 **Key Elements:**
 
 **Layout (Desktop):**
+
 - Container max-width 1200px, centered
 - Two-column: Left (65%) bio text, Right (35%) hobbies/interests
 - Generous padding top/bottom (120px)
 
 **Content (Left Column):**
+
 - Section heading: "About Me" (H2, 36-40px)
 - Bio content: 3-4 paragraphs (16-18px, line-height 1.6-1.8)
 - Markdown rendered with proper spacing between paragraphs
 
 **Content (Right Column):**
+
 - Subheading: "When I'm Not Coding" (H3, 24px)
 - Hobby grid: 2 columns x 3 rows
 - Each hobby: Icon + label (Hiking, Snow Skiing, Video Games, Disc Golf, F1, Food & Plants)
 - Icons: Lucide React, 32px, accent color
 
 **Mobile (375px):**
+
 - Single column, bio first, hobbies below (3 columns x 2 rows)
 
 **Interaction Notes:**
+
 - Fade-in on scroll, links open in new tab, hobby icons scale on hover
 
 **Design File Reference:** [To be created: about-section.fig]
@@ -368,10 +390,12 @@ graph TD
 **Key Elements:**
 
 **Layout (Desktop):**
+
 - Three columns: Frontend | Backend | Tools & Other
 - Each column: Category heading + skill badges
 
 **Skill Badge Design:**
+
 - Rounded rectangle (border-radius 8px), padding: 12px 20px
 - Background: Light gray or subtle gradient
 - Text: 14-16px, medium weight
@@ -379,9 +403,11 @@ graph TD
 - Hover: Slight elevation, accent border
 
 **Mobile (375px):**
+
 - Single column, categories stacked, badges wrap 2 per row
 
 **Interaction Notes:**
+
 - Fade-in on scroll (staggered by column), hover scale 1.02x
 
 **Design File Reference:** [To be created: skills-section.fig]
@@ -397,15 +423,18 @@ graph TD
 **Layout:** 3 columns (desktop), 2 (tablet), 1 (mobile), gap: 32px
 
 **Project Card:**
+
 - Card with elevation, 16:9 image, content padding: 24px
 - Title (H3, 24px), description (2-3 lines), tech badges, "View Details" link
 
 **Card States:**
+
 - Default: Subtle shadow
 - Hover: Elevated shadow, scale 1.02x
 - Focus: Accent border
 
 **Interaction Notes:**
+
 - Cards fade-in on scroll (staggered), click opens detail view
 
 **Design File Reference:** [To be created: projects-grid.fig]
@@ -425,6 +454,7 @@ graph TD
 **Metric Callouts:** Highlighted boxes for key metrics (e.g., "40% faster")
 
 **Interaction Notes:**
+
 - Fade-in + slide-up animation, ESC/backdrop closes, focus trap, scroll locked
 
 **Design File Reference:** [To be created: project-detail-modal.fig]
@@ -517,19 +547,19 @@ graph TD
 
 ### Color Palette
 
-| Color Type | Hex Code | Usage |
-|------------|----------|-------|
-| **Primary** | `#1e293b` (Slate 800) | Main text, headlines, primary UI elements |
-| **Secondary** | `#475569` (Slate 600) | Secondary text, subheadings, muted content |
-| **Accent** | `#06b6d4` (Cyan 500) | CTAs, links, interactive elements, highlights |
-| **Success** | `#10b981` (Emerald 500) | Positive feedback, success states |
-| **Warning** | `#f59e0b` (Amber 500) | Cautions, important notices |
-| **Error** | `#ef4444` (Red 500) | Errors, validation failures |
-| **Neutral 50** | `#f8fafc` | Light backgrounds |
-| **Neutral 100** | `#f1f5f9` | Card backgrounds |
-| **Neutral 200** | `#e2e8f0` | Borders, dividers |
-| **Neutral 900** | `#0f172a` (Slate 900) | Deep backgrounds |
-| **White** | `#ffffff` | Primary backgrounds |
+| Color Type      | Hex Code                | Usage                                         |
+| --------------- | ----------------------- | --------------------------------------------- |
+| **Primary**     | `#1e293b` (Slate 800)   | Main text, headlines, primary UI elements     |
+| **Secondary**   | `#475569` (Slate 600)   | Secondary text, subheadings, muted content    |
+| **Accent**      | `#06b6d4` (Cyan 500)    | CTAs, links, interactive elements, highlights |
+| **Success**     | `#10b981` (Emerald 500) | Positive feedback, success states             |
+| **Warning**     | `#f59e0b` (Amber 500)   | Cautions, important notices                   |
+| **Error**       | `#ef4444` (Red 500)     | Errors, validation failures                   |
+| **Neutral 50**  | `#f8fafc`               | Light backgrounds                             |
+| **Neutral 100** | `#f1f5f9`               | Card backgrounds                              |
+| **Neutral 200** | `#e2e8f0`               | Borders, dividers                             |
+| **Neutral 900** | `#0f172a` (Slate 900)   | Deep backgrounds                              |
+| **White**       | `#ffffff`               | Primary backgrounds                           |
 
 ### Typography
 
@@ -540,16 +570,16 @@ graph TD
 
 #### Type Scale
 
-| Element | Size | Weight | Line Height | Usage |
-|---------|------|--------|-------------|-------|
-| **H1** | 48px (3rem) | 700 (Bold) | 1.2 | Hero headline |
-| **H2** | 36px (2.25rem) | 700 (Bold) | 1.3 | Section headings |
-| **H3** | 24px (1.5rem) | 600 (Semibold) | 1.4 | Subsection headings |
-| **H4** | 20px (1.25rem) | 600 (Semibold) | 1.4 | Minor headings |
-| **Body** | 16px (1rem) | 400 (Regular) | 1.6 | Body text |
-| **Body Large** | 18px (1.125rem) | 400 (Regular) | 1.6 | Lead paragraphs |
-| **Small** | 14px (0.875rem) | 400 (Regular) | 1.5 | Captions, labels |
-| **Tiny** | 12px (0.75rem) | 500 (Medium) | 1.4 | Badges, tags |
+| Element        | Size            | Weight         | Line Height | Usage               |
+| -------------- | --------------- | -------------- | ----------- | ------------------- |
+| **H1**         | 48px (3rem)     | 700 (Bold)     | 1.2         | Hero headline       |
+| **H2**         | 36px (2.25rem)  | 700 (Bold)     | 1.3         | Section headings    |
+| **H3**         | 24px (1.5rem)   | 600 (Semibold) | 1.4         | Subsection headings |
+| **H4**         | 20px (1.25rem)  | 600 (Semibold) | 1.4         | Minor headings      |
+| **Body**       | 16px (1rem)     | 400 (Regular)  | 1.6         | Body text           |
+| **Body Large** | 18px (1.125rem) | 400 (Regular)  | 1.6         | Lead paragraphs     |
+| **Small**      | 14px (0.875rem) | 400 (Regular)  | 1.5         | Captions, labels    |
+| **Tiny**       | 12px (0.75rem)  | 500 (Medium)   | 1.4         | Badges, tags        |
 
 **Mobile Adjustments:** H1: 32-36px, H2: 28-32px, H3: 20-22px
 
@@ -566,6 +596,7 @@ graph TD
 **Container Max-Widths:** 1280px (xl) primary, 1536px (2xl) maximum
 
 **Spacing Scale (Tailwind):**
+
 - 4: 16px (base unit)
 - 6: 24px (medium)
 - 8: 32px (large)
@@ -587,16 +618,19 @@ graph TD
 ### Key Requirements
 
 #### Visual
+
 - **Color Contrast:** Body text 4.5:1, large text 3:1, UI components 3:1 (all palette combinations verified ✅)
 - **Focus Indicators:** 2px solid accent ring on all interactive elements, 2px offset, never remove focus styles
 - **Text Sizing:** Support 200% zoom, relative units (rem/em), responsive sizing
 
 #### Interaction
+
 - **Keyboard Navigation:** All elements accessible via Tab/Enter/Space/Arrow keys, skip links, logical tab order, no traps
 - **Screen Reader:** Semantic HTML, proper heading hierarchy (H1→H2→H3), ARIA labels for icons, live regions for updates
 - **Touch Targets:** Minimum 44x44px, 8px spacing between targets, visual feedback on touch
 
 #### Content
+
 - **Alt Text:** All images have descriptive alt, decorative images empty alt (`alt=""`), icon buttons have aria-label
 - **Heading Structure:** Single H1, logical hierarchy, descriptive headings
 - **Form Labels:** Every field has visible `<label>`, required fields indicated, errors associated with fields
@@ -606,6 +640,7 @@ graph TD
 **Automated:** axe DevTools, Lighthouse, WAVE, Pa11y in CI/CD
 
 **Manual:**
+
 - Keyboard navigation (Tab through entire page, verify focus indicators)
 - Screen readers (VoiceOver on macOS, NVDA on Windows, mobile screen readers)
 - Visual testing (200% zoom, high contrast mode, reduced motion)
@@ -619,21 +654,23 @@ graph TD
 
 ### Breakpoints
 
-| Breakpoint | Min Width | Max Width | Target Devices | Container Width |
-|------------|-----------|-----------|----------------|-----------------|
-| **Mobile** | 375px | 767px | iPhone, Android phones | Full width (16px padding) |
-| **Tablet** | 768px | 1023px | iPad, Android tablets | 720px |
-| **Desktop** | 1024px | 1279px | Laptops, small desktops | 960px |
-| **Large** | 1280px | - | Large desktops | 1200px |
+| Breakpoint  | Min Width | Max Width | Target Devices          | Container Width           |
+| ----------- | --------- | --------- | ----------------------- | ------------------------- |
+| **Mobile**  | 375px     | 767px     | iPhone, Android phones  | Full width (16px padding) |
+| **Tablet**  | 768px     | 1023px    | iPad, Android tablets   | 720px                     |
+| **Desktop** | 1024px    | 1279px    | Laptops, small desktops | 960px                     |
+| **Large**   | 1280px    | -         | Large desktops          | 1200px                    |
 
 ### Adaptation Patterns
 
 **Layout Changes:**
+
 - **Mobile:** Single column, stacked sections, full-width components, reduced padding (16px)
 - **Tablet:** Two columns where appropriate, better spacing
 - **Desktop:** Multi-column (2-3), side-by-side layouts, generous spacing
 
 **Navigation Changes:**
+
 - **Mobile:** Hamburger menu, slide-out drawer, large tap targets (48px)
 - **Tablet:** Hamburger or full nav (depends on link count)
 - **Desktop:** Full horizontal nav, hover states, active highlighting
@@ -641,6 +678,7 @@ graph TD
 **Content Priority (Mobile):** Hero → About → Skills → Projects → Experience → Contact
 
 **Interaction Changes:**
+
 - **Mobile:** Touch gestures, 44px+ tap targets, no hover (active/focus only), full-screen modals
 - **Desktop:** Hover effects, cursor changes, keyboard shortcuts, centered modals with backdrop
 - **Tablet:** Hybrid (touch + mouse support)
@@ -662,6 +700,7 @@ graph TD
 ### Key Animations
 
 **Page Load (Hero):**
+
 - Headline: Fade-in + translate Y, 600ms, delay 0ms
 - Subheadline: Fade-in + translate Y, 600ms, delay 100ms
 - CTA: Fade-in + translate Y, 600ms, delay 200ms
@@ -670,6 +709,7 @@ graph TD
 **Scroll Animations:** Fade-in + translate Y (30px → 0), 500ms, triggered by Intersection Observer, stagger 50ms for multiple items
 
 **Interactions:**
+
 - **Button hover:** Scale 1.02, shadow increase, 200ms
 - **Card hover:** Scale 1.02, elevation, 250ms
 - **Navigation:** Smooth scroll 800ms, active indicator slide 200ms
@@ -678,13 +718,16 @@ graph TD
 - **Error shake:** Translate X animation, 400ms
 
 **Micro-interactions:**
+
 - Down arrow bounce (hero), hobby icons scale on hover, link underline slide, badge hover effects
 
 ### Reduced Motion Support
 
 ```css
 @media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.01ms !important; }
+  * {
+    animation-duration: 0.01ms !important;
+  }
 }
 ```
 
@@ -772,4 +815,3 @@ All animations become instant for users with vestibular disorders
 **Document Status:** ✅ Complete - Ready for Architect Handoff
 **Next Agent:** @architect for technical architecture document
 **Last Updated:** November 5, 2025
-

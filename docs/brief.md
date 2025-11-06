@@ -18,13 +18,16 @@ Carson Antoine's professional portfolio is a modern, performance-optimized web a
 ## Problem Statement
 
 ### Current State
+
 Carson is actively seeking senior/lead software engineering positions but lacks a centralized, professional online presence to showcase his technical capabilities and career achievements. His current professional profile exists only through:
+
 - LinkedIn (limited technical depth)
 - Resume (static, text-only format)
 - No live code samples or project demonstrations
 - No platform to tell his unique career transition story
 
 ### Pain Points
+
 1. **Credibility Gap:** Without a portfolio, hiring managers cannot verify technical skills or see code quality
 2. **Differentiation Challenge:** In a competitive market, Carson needs to stand out beyond resume keywords
 3. **Story Telling:** His healthcare → software engineering transition is compelling but not effectively communicated
@@ -32,19 +35,23 @@ Carson is actively seeking senior/lead software engineering positions but lacks 
 5. **Modern Stack Showcase:** Experience with cutting-edge tools (Windsurf, Cursor) isn't visible to recruiters
 
 ### Impact
+
 - Missed opportunities with companies that prioritize portfolio reviews in hiring process
 - Inability to demonstrate full-stack capabilities in a single, cohesive presentation
 - Lost competitive advantage against candidates with strong online presence
 - Reduced callback rates from technical recruiters and hiring managers
 
 ### Why Existing Solutions Fall Short
+
 - Generic portfolio templates don't showcase technical sophistication
 - LinkedIn profiles lack depth for senior engineering roles
 - GitHub alone doesn't provide context or narrative around projects
 - Resume formats can't demonstrate interactive, live functionality
 
 ### Urgency
+
 Carson is currently in active job search mode (last role ended October 2025). A professional portfolio is critical for:
+
 - Immediate application to senior/lead positions
 - Networking at tech events and conferences
 - Inbound recruiter interest
@@ -55,7 +62,9 @@ Carson is currently in active job search mode (last role ended October 2025). A 
 ## Proposed Solution
 
 ### Core Concept
+
 A **Next.js 14+ portfolio application** that serves as both a showcase of Carson's work AND a demonstration of his technical capabilities. The portfolio itself becomes a project that proves his expertise in:
+
 - Modern React development (App Router, Server Components)
 - TypeScript and type-safe development
 - Performance optimization (Core Web Vitals)
@@ -63,6 +72,7 @@ A **Next.js 14+ portfolio application** that serves as both a showcase of Carson
 - Cloud deployment (Vercel)
 
 ### Key Differentiators
+
 1. **Technical Sophistication:** The portfolio's codebase demonstrates senior-level engineering practices
 2. **Performance-First:** Lighthouse scores of 95+ across all metrics
 3. **Interactive Elements:** Live demos, code playgrounds, or embedded projects
@@ -71,6 +81,7 @@ A **Next.js 14+ portfolio application** that serves as both a showcase of Carson
 6. **Modern Stack:** Uses technologies Carson wants to work with (Next.js, TypeScript, Tailwind)
 
 ### Why This Will Succeed
+
 - **Proof Through Implementation:** The portfolio itself is a technical case study
 - **SEO Optimized:** Discoverable by recruiters searching for ".NET React developer" etc.
 - **Shareable:** Single URL that can be included in all applications and communications
@@ -78,6 +89,7 @@ A **Next.js 14+ portfolio application** that serves as both a showcase of Carson
 - **Scalable:** Can grow into a personal brand platform (newsletter, courses, etc.)
 
 ### High-Level Vision
+
 A clean, fast, accessible portfolio that immediately communicates technical excellence while providing depth for those who want to explore further. The site should feel like a product built by a senior engineer, not a template filled in by a junior developer.
 
 ---
@@ -87,12 +99,14 @@ A clean, fast, accessible portfolio that immediately communicates technical exce
 ### Primary User Segment: Technical Hiring Managers
 
 **Profile:**
+
 - Senior engineers or engineering managers at tech companies
 - 5-15 years of experience in software development
 - Responsible for evaluating senior/lead engineering candidates
 - Located primarily in US tech hubs (SF, Seattle, Austin, NYC, Remote)
 
 **Current Behaviors:**
+
 - Review 10-50 candidate profiles per open position
 - Spend 2-5 minutes on initial portfolio review
 - Look for code quality, project complexity, and technical depth
@@ -100,6 +114,7 @@ A clean, fast, accessible portfolio that immediately communicates technical exce
 - Check GitHub, LinkedIn, and personal sites
 
 **Specific Needs:**
+
 - Quick assessment of technical capabilities
 - Evidence of senior-level thinking (architecture, trade-offs, scalability)
 - Proof of claimed achievements (metrics, impact)
@@ -107,6 +122,7 @@ A clean, fast, accessible portfolio that immediately communicates technical exce
 - Verification of technology stack experience
 
 **Goals:**
+
 - Identify qualified candidates quickly
 - Reduce false positives in interview pipeline
 - Find engineers who can hit the ground running
@@ -115,12 +131,14 @@ A clean, fast, accessible portfolio that immediately communicates technical exce
 ### Secondary User Segment: Technical Recruiters
 
 **Profile:**
+
 - Internal recruiters at tech companies or agency recruiters
 - May have technical background but not always hands-on developers
 - Manage multiple open positions simultaneously
 - Incentivized by successful placements
 
 **Current Behaviors:**
+
 - Use LinkedIn and Boolean search to find candidates
 - Scan resumes for keyword matches
 - Look for portfolio links to validate technical skills
@@ -128,6 +146,7 @@ A clean, fast, accessible portfolio that immediately communicates technical exce
 - Track candidate engagement and interest
 
 **Specific Needs:**
+
 - Easy-to-share candidate profiles
 - Clear summary of technical skills and experience
 - Contact information and availability status
@@ -135,6 +154,7 @@ A clean, fast, accessible portfolio that immediately communicates technical exce
 - Differentiation points to pitch to hiring managers
 
 **Goals:**
+
 - Build pipeline of qualified senior engineers
 - Present candidates that will pass technical screens
 - Maintain relationships with strong candidates
@@ -145,6 +165,7 @@ A clean, fast, accessible portfolio that immediately communicates technical exce
 ## Goals & Success Metrics
 
 ### Business Objectives
+
 - **Increase interview conversion rate by 30%** within 3 months of launch (baseline: current application-to-interview ratio)
 - **Generate 5+ inbound recruiter contacts per month** through organic discovery
 - **Secure senior/lead engineering role** at target company within 6 months
@@ -152,6 +173,7 @@ A clean, fast, accessible portfolio that immediately communicates technical exce
 - **Build content library** of 10+ technical blog posts within first year
 
 ### User Success Metrics
+
 - **Average session duration > 3 minutes** (indicates engagement with content)
 - **Pages per session > 3** (users exploring multiple sections)
 - **Bounce rate < 40%** (visitors finding relevant content)
@@ -159,6 +181,7 @@ A clean, fast, accessible portfolio that immediately communicates technical exce
 - **Return visitor rate > 15%** (memorable, bookmark-worthy content)
 
 ### Key Performance Indicators (KPIs)
+
 - **Lighthouse Performance Score: 95+** - Demonstrates technical excellence and optimization skills
 - **Core Web Vitals: All Green** - LCP < 2.5s, FID < 100ms, CLS < 0.1
 - **Accessibility Score: 100** - WCAG 2.1 AA compliance, demonstrates inclusive design
@@ -217,6 +240,7 @@ A clean, fast, accessible portfolio that immediately communicates technical exce
 ### MVP Success Criteria
 
 The MVP will be considered successful when:
+
 1. **Portfolio is live and accessible** at custom domain (carsonantoine.com or similar)
 2. **Lighthouse scores meet targets** (95+ performance, 100 accessibility, 95+ SEO)
 3. **All core sections are complete** with professional content and imagery
@@ -233,6 +257,7 @@ The MVP will be considered successful when:
 ### Phase 2 Features
 
 **Technical Blog Platform:**
+
 - Markdown-based blog with syntax highlighting
 - Topics: .NET best practices, React patterns, Azure serverless, career transition advice
 - RSS feed for subscribers
@@ -240,17 +265,20 @@ The MVP will be considered successful when:
 - Goal: Establish thought leadership and improve SEO
 
 **Interactive Project Demos:**
+
 - Embedded live demos or code sandboxes
 - GitHub repository integration showing code snippets
 - Architecture diagrams and technical deep-dives
 - Video walkthroughs of complex projects
 
 **Enhanced Personalization:**
+
 - Dark mode / light mode toggle
 - Customizable color themes
 - Accessibility preferences (font size, contrast)
 
 **Community Features:**
+
 - Newsletter signup for blog updates
 - Comment system for blog posts (Disqus or similar)
 - Social proof (GitHub stars, LinkedIn connections)
@@ -259,6 +287,7 @@ The MVP will be considered successful when:
 
 **Personal Brand Platform:**
 Transform the portfolio into a comprehensive personal brand hub that includes:
+
 - Regular technical content (weekly blog posts)
 - Video tutorials or conference talks
 - Open-source project showcase
@@ -266,12 +295,14 @@ Transform the portfolio into a comprehensive personal brand hub that includes:
 - Community building (Discord, newsletter with 1,000+ subscribers)
 
 **Monetization Opportunities:**
+
 - Technical courses or workshops
 - Consulting services for .NET/React/Azure projects
 - Sponsored content or affiliate partnerships
 - Speaking engagements at conferences
 
 **Thought Leadership:**
+
 - Recognized expert in .NET/React full-stack development
 - Regular contributor to tech publications (Dev.to, Medium, Hashnode)
 - Conference speaker on topics like career transitions, serverless architecture
@@ -293,7 +324,7 @@ Transform the portfolio into a comprehensive personal brand hub that includes:
 ### Platform Requirements
 
 - **Target Platforms:** Web (primary), mobile-responsive
-- **Browser Support:** 
+- **Browser Support:**
   - Chrome/Edge (last 2 versions)
   - Firefox (last 2 versions)
   - Safari (last 2 versions)
@@ -309,6 +340,7 @@ Transform the portfolio into a comprehensive personal brand hub that includes:
 ### Technology Preferences
 
 **Frontend:**
+
 - **Framework:** Next.js 14+ (App Router, React Server Components)
 - **Language:** TypeScript (strict mode)
 - **Styling:** Tailwind CSS with custom design system
@@ -318,16 +350,19 @@ Transform the portfolio into a comprehensive personal brand hub that includes:
 - **Forms:** React Hook Form + Zod validation
 
 **Backend:**
+
 - **API Routes:** Next.js API routes for contact form
 - **Email Service:** Resend or SendGrid for contact form submissions
 - **Analytics:** Plausible (privacy-friendly) or Google Analytics 4
 - **CMS (Future):** Contentful, Sanity, or markdown files with gray-matter
 
 **Database:**
+
 - **Not required for MVP** (static content only)
 - **Future:** Vercel Postgres or Supabase for blog comments, analytics
 
 **Hosting/Infrastructure:**
+
 - **Platform:** Vercel (zero-config Next.js deployment)
 - **Domain:** Custom domain (carsonantoine.com)
 - **CDN:** Vercel Edge Network (automatic)
@@ -337,6 +372,7 @@ Transform the portfolio into a comprehensive personal brand hub that includes:
 ### Architecture Considerations
 
 **Repository Structure:**
+
 ```
 portfolio/
 ├── app/                    # Next.js 14 App Router
@@ -353,18 +389,21 @@ portfolio/
 ```
 
 **Service Architecture:**
+
 - **Monolithic Next.js application** (appropriate for portfolio scale)
 - **Static generation** for most pages (ISR for blog in future)
 - **API routes** for dynamic features (contact form)
 - **Edge functions** for performance-critical operations
 
 **Integration Requirements:**
+
 - **Email service** for contact form (Resend API)
 - **Analytics** for visitor tracking (Plausible or GA4)
 - **GitHub API** (future) for repository stats
 - **LinkedIn API** (future) for profile integration
 
 **Security/Compliance:**
+
 - **HTTPS only** (enforced by Vercel)
 - **Content Security Policy** (CSP) headers
 - **Rate limiting** on contact form API
@@ -380,6 +419,7 @@ portfolio/
 ### Constraints
 
 **Budget:**
+
 - **Development:** $0 (self-built)
 - **Hosting:** $0 (Vercel free tier sufficient for MVP)
 - **Domain:** ~$15/year (carsonantoine.com)
@@ -387,18 +427,21 @@ portfolio/
 - **Total MVP Cost:** ~$15/year
 
 **Timeline:**
+
 - **MVP Development:** 2-3 weeks (part-time, ~20-30 hours total)
 - **Content Creation:** 1 week (writing, gathering assets)
 - **Testing & Refinement:** 3-5 days
 - **Target Launch:** December 1, 2025
 
 **Resources:**
+
 - **Developer:** Carson (solo project)
 - **Designer:** Self-designed using Tailwind + shadcn/ui
 - **Content Writer:** Self-written (with AI assistance for editing)
 - **No external dependencies** or team coordination required
 
 **Technical:**
+
 - **Must use free/open-source tools** for MVP
 - **No backend database** for MVP (static content only)
 - **Must be maintainable** by single developer
@@ -423,17 +466,17 @@ portfolio/
 
 ### Key Risks
 
-- **Content Quality Risk:** Portfolio content (project descriptions, bio) may not effectively communicate value proposition. *Mitigation: Peer review by 2-3 senior engineers before launch, professional editing assistance.*
+- **Content Quality Risk:** Portfolio content (project descriptions, bio) may not effectively communicate value proposition. _Mitigation: Peer review by 2-3 senior engineers before launch, professional editing assistance._
 
-- **Differentiation Risk:** Portfolio may look similar to other developer portfolios, failing to stand out. *Mitigation: Focus on unique career story, measurable achievements, and technical sophistication of implementation.*
+- **Differentiation Risk:** Portfolio may look similar to other developer portfolios, failing to stand out. _Mitigation: Focus on unique career story, measurable achievements, and technical sophistication of implementation._
 
-- **Time Commitment Risk:** Development may take longer than estimated, delaying job search. *Mitigation: Define strict MVP scope, use pre-built components (shadcn/ui), timebox development to 3 weeks.*
+- **Time Commitment Risk:** Development may take longer than estimated, delaying job search. _Mitigation: Define strict MVP scope, use pre-built components (shadcn/ui), timebox development to 3 weeks._
 
-- **Technical Complexity Risk:** Overengineering the portfolio could lead to delays or maintenance burden. *Mitigation: Follow YAGNI principle, use proven technologies, avoid premature optimization.*
+- **Technical Complexity Risk:** Overengineering the portfolio could lead to delays or maintenance burden. _Mitigation: Follow YAGNI principle, use proven technologies, avoid premature optimization._
 
-- **SEO/Discovery Risk:** Portfolio may not rank well or be discovered by recruiters. *Mitigation: Implement SEO best practices, share on LinkedIn/Twitter, include in all job applications.*
+- **SEO/Discovery Risk:** Portfolio may not rank well or be discovered by recruiters. _Mitigation: Implement SEO best practices, share on LinkedIn/Twitter, include in all job applications._
 
-- **Maintenance Burden Risk:** Portfolio becomes outdated quickly without regular updates. *Mitigation: Design for easy content updates, schedule quarterly reviews, use CMS for blog (Phase 2).*
+- **Maintenance Burden Risk:** Portfolio becomes outdated quickly without regular updates. _Mitigation: Design for easy content updates, schedule quarterly reviews, use CMS for blog (Phase 2)._
 
 ### Open Questions
 
@@ -463,6 +506,7 @@ portfolio/
 ### A. Research Summary
 
 **Market Research Findings:**
+
 - 73% of hiring managers review candidate portfolios during evaluation process
 - Portfolios with case studies showing measurable impact receive 2.3x more callbacks
 - Average time spent on portfolio: 2-4 minutes (must communicate value quickly)
@@ -470,6 +514,7 @@ portfolio/
 - Career transition stories create memorable differentiation
 
 **Competitive Analysis:**
+
 - Most developer portfolios use similar templates (generic, forgettable)
 - Few portfolios demonstrate technical sophistication through implementation
 - Best portfolios tell stories, not just list projects
@@ -477,6 +522,7 @@ portfolio/
 - Successful portfolios have clear calls-to-action
 
 **Technical Feasibility:**
+
 - Next.js 14 + Vercel provides optimal developer experience and performance
 - Tailwind + shadcn/ui enables rapid, accessible UI development
 - Static generation sufficient for MVP (no database required)
@@ -485,6 +531,7 @@ portfolio/
 ### B. Stakeholder Input
 
 **Primary Stakeholder:** Carson Antoine
+
 - **Goals:** Secure senior/lead engineering role, establish personal brand
 - **Preferences:** Modern tech stack, clean design, performance-focused
 - **Constraints:** Limited budget, 2-3 week timeline, solo development
@@ -493,15 +540,18 @@ portfolio/
 ### C. References
 
 **Inspiration Portfolios:**
+
 - [To be added during research phase]
 
 **Technical Resources:**
+
 - Next.js 14 Documentation: https://nextjs.org/docs
 - shadcn/ui Components: https://ui.shadcn.com
 - Tailwind CSS: https://tailwindcss.com
 - Vercel Deployment: https://vercel.com/docs
 
 **Best Practices:**
+
 - Web.dev Performance: https://web.dev/performance
 - WCAG 2.1 Guidelines: https://www.w3.org/WAI/WCAG21/quickref
 - SEO Starter Guide: https://developers.google.com/search/docs
@@ -528,6 +578,7 @@ portfolio/
 This Project Brief provides the full context for **Carson Antoine's Professional Portfolio Site**. The next step is to work with the **Product Manager (PM) agent** to create a detailed Product Requirements Document (PRD) that will guide the Architect and Development teams.
 
 **Recommended PM Actions:**
+
 1. Review this brief thoroughly and ask clarifying questions
 2. Conduct competitor analysis to inform feature prioritization
 3. Create detailed user stories for each core feature
@@ -537,6 +588,7 @@ This Project Brief provides the full context for **Carson Antoine's Professional
 7. Work with UX Expert for design system and wireframes
 
 **Key Questions for PM:**
+
 - Should we include a blog in MVP or defer to Phase 2?
 - What's the priority order for project case studies?
 - How should we handle the career transition narrative?

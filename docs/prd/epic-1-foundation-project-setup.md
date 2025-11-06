@@ -9,6 +9,7 @@ I want to create a new Next.js 14 project with TypeScript and App Router,
 so that I have a modern, type-safe foundation for building the portfolio.
 
 **Acceptance Criteria:**
+
 1. Next.js 14.2+ project created using `create-next-app` with TypeScript and App Router options
 2. TypeScript configured with strict mode enabled in `tsconfig.json`
 3. Project structure follows Next.js 14 App Router conventions (`/app` directory)
@@ -23,6 +24,7 @@ I want to set up code quality tools (ESLint, Prettier, Husky),
 so that code remains consistent and maintainable throughout development.
 
 **Acceptance Criteria:**
+
 1. ESLint configured with Next.js recommended rules and custom rules for TypeScript
 2. Prettier installed and configured with consistent formatting rules
 3. `.prettierrc` and `.eslintrc.json` files created with project standards
@@ -38,6 +40,7 @@ I want to set up Tailwind CSS with custom configuration,
 so that I can rapidly build responsive, consistent UI components.
 
 **Acceptance Criteria:**
+
 1. Tailwind CSS 3.4+ installed with PostCSS and Autoprefixer
 2. `tailwind.config.ts` created with custom design tokens (colors, fonts, spacing)
 3. Global CSS file configured with Tailwind directives (`@tailwind base`, `@tailwind components`, `@tailwind utilities`)
@@ -53,6 +56,7 @@ I want to initialize shadcn/ui and install base components,
 so that I have accessible, customizable UI primitives ready to use.
 
 **Acceptance Criteria:**
+
 1. shadcn/ui CLI installed and initialized with project configuration
 2. `components.json` configured with Tailwind and TypeScript settings
 3. `/components/ui` directory created for shadcn components
@@ -68,6 +72,7 @@ I want to create the root layout with metadata and a simple home page,
 so that the application has proper HTML structure and SEO foundation.
 
 **Acceptance Criteria:**
+
 1. Root layout (`app/layout.tsx`) created with proper HTML structure
 2. Metadata configured with site title, description, and viewport settings
 3. Font optimization implemented using `next/font` (Inter or similar)
@@ -83,6 +88,7 @@ I want to deploy the application to Vercel with automatic deployments,
 so that changes are automatically deployed and the production pipeline is validated.
 
 **Acceptance Criteria:**
+
 1. Vercel account created and project connected to Git repository
 2. Production deployment successful and accessible via Vercel URL
 3. Automatic deployments configured for main branch (production)
@@ -98,6 +104,7 @@ I want to set up environment variable management for API keys and secrets,
 so that sensitive data is properly secured and accessible in different environments.
 
 **Acceptance Criteria:**
+
 1. `.env.local` file created for local development (gitignored)
 2. `.env.example` file created documenting required environment variables
 3. Vercel environment variables configured for production (placeholder values)

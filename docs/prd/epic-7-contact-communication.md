@@ -9,6 +9,7 @@ I want to see clear contact options,
 so that I can easily reach out to Carson about opportunities.
 
 **Acceptance Criteria:**
+
 1. Contact section component created with Section and Container layout
 2. Section heading: "Get In Touch" or similar
 3. Two-column layout: contact methods (left) + contact form (right)
@@ -24,6 +25,7 @@ I want multiple ways to contact Carson,
 so that I can choose my preferred communication method.
 
 **Acceptance Criteria:**
+
 1. Email link displayed: carson.workflow@gmail.com (mailto: link)
 2. LinkedIn profile link with icon (opens in new tab)
 3. GitHub profile link with icon (opens in new tab)
@@ -39,6 +41,7 @@ I want to fill out a contact form,
 so that I can send Carson a message directly from the portfolio.
 
 **Acceptance Criteria:**
+
 1. Contact form component created with React Hook Form
 2. Form fields: Name (required), Email (required), Message (required, textarea)
 3. Field labels and placeholders provide clear guidance
@@ -54,6 +57,7 @@ I want robust form validation,
 so that only valid submissions are sent and users get clear feedback.
 
 **Acceptance Criteria:**
+
 1. Zod schema created for form validation (name, email, message)
 2. Email field validates proper email format
 3. Message field has minimum length requirement (e.g., 10 characters)
@@ -69,6 +73,7 @@ I want contact form submissions to send emails via Resend API,
 so that Carson receives messages from visitors.
 
 **Acceptance Criteria:**
+
 1. Resend API key added to environment variables
 2. Next.js API route created: `/api/contact`
 3. API route validates request body using Zod schema
@@ -84,6 +89,7 @@ I want rate limiting on the contact form API,
 so that the form cannot be abused or spammed.
 
 **Acceptance Criteria:**
+
 1. Rate limiting implemented using Upstash Redis or similar
 2. Limit: 3 submissions per IP address per hour
 3. Rate limit exceeded returns 429 status with clear message
@@ -99,6 +105,7 @@ I want clear feedback after submitting the contact form,
 so that I know if my message was sent successfully.
 
 **Acceptance Criteria:**
+
 1. Success state displays confirmation message after successful submission
 2. Success message thanks user and sets expectation for response time
 3. Form clears after successful submission

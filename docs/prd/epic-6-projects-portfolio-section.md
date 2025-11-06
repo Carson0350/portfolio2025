@@ -9,6 +9,7 @@ I want to see Carson's featured projects prominently displayed,
 so that I can understand the type and quality of work he produces.
 
 **Acceptance Criteria:**
+
 1. Projects section component created with Section and Container layout
 2. Section heading: "Featured Projects" or similar
 3. Grid layout for project cards (1 col mobile, 2 cols tablet, 3 cols desktop)
@@ -24,6 +25,7 @@ I want a reusable project card component for the grid view,
 so that projects are displayed consistently with key information visible.
 
 **Acceptance Criteria:**
+
 1. ProjectCard component created with image, title, summary, technologies
 2. Card uses Card component from design system with custom styling
 3. Project image displayed with Next.js Image optimization
@@ -39,6 +41,7 @@ I want to see detailed information about each project,
 so that I can understand the problem, solution, and Carson's contribution.
 
 **Acceptance Criteria:**
+
 1. ProjectDetail component created for expanded project view
 2. Displays full case study: Problem Statement, Solution Approach, Technologies, Key Achievements, Outcomes
 3. Hero image displayed prominently at top
@@ -54,6 +57,7 @@ I want a smooth UX for viewing project details,
 so that users can explore projects without losing context.
 
 **Acceptance Criteria:**
+
 1. Modal or expandable view implemented for project details
 2. Smooth open/close animation using Framer Motion
 3. Modal is accessible (keyboard navigation, focus trap, ESC to close)
@@ -69,6 +73,7 @@ I want projects to load from markdown files,
 so that content can be updated without code changes.
 
 **Acceptance Criteria:**
+
 1. Project content loaded from `/content/projects/*.md` files
 2. Frontmatter parsed for metadata (title, date, technologies, featured, image)
 3. Markdown body rendered with react-markdown
@@ -84,6 +89,7 @@ I want to filter projects by technology or category,
 so that I can find projects relevant to my interests.
 
 **Acceptance Criteria:**
+
 1. Filter buttons/tags added above projects grid (e.g., "All", "React", ".NET", "Azure")
 2. Clicking filter shows only projects using that technology
 3. Multiple filters can be active simultaneously (AND logic)
@@ -99,6 +105,7 @@ I want project images optimized for performance,
 so that the portfolio loads quickly despite rich visual content.
 
 **Acceptance Criteria:**
+
 1. All project images converted to WebP format with fallbacks
 2. Multiple image sizes generated for responsive loading
 3. Next.js Image component used with proper width/height attributes

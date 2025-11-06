@@ -24,6 +24,7 @@ docs/stories/
 ## 📋 Key Documents
 
 ### BACKLOG.md
+
 - Overview of all 9 epics
 - Sprint planning summary
 - Story naming conventions
@@ -31,6 +32,7 @@ docs/stories/
 - Story point scale
 
 ### SPRINT-PLAN.md
+
 - Complete breakdown of all 58 stories
 - Story points for each story
 - Priority assignments (P0, P1, P2)
@@ -39,6 +41,7 @@ docs/stories/
 - Risk management
 
 ### Individual Story Files
+
 - User story format (As a... I want... So that...)
 - Acceptance criteria (checkboxes)
 - Technical notes and implementation guidance
@@ -79,13 +82,13 @@ docs/stories/
 
 ## 🏆 Story Point Scale
 
-| Points | Effort | Description |
-|--------|--------|-------------|
-| 1 | < 2 hours | Simple configuration, small component |
-| 2 | 2-4 hours | Medium component, API integration |
-| 3 | 4-8 hours | Complex component, multiple integrations |
-| 5 | 1-2 days | Major feature, requires research |
-| 8 | 2-3 days | Epic-level work, should be broken down |
+| Points | Effort    | Description                              |
+| ------ | --------- | ---------------------------------------- |
+| 1      | < 2 hours | Simple configuration, small component    |
+| 2      | 2-4 hours | Medium component, API integration        |
+| 3      | 4-8 hours | Complex component, multiple integrations |
+| 5      | 1-2 days  | Major feature, requires research         |
+| 8      | 2-3 days  | Epic-level work, should be broken down   |
 
 ---
 
@@ -116,9 +119,10 @@ A story is "Done" when:
 
 ## 📝 Creating Individual Story Files
 
-**Note:** Individual story files (1-1-*.md, 1-2-*.md, etc.) can be created as needed during development. The SPRINT-PLAN.md contains all story details. Individual files provide a workspace for tracking progress and adding implementation notes.
+**Note:** Individual story files (1-1-_.md, 1-2-_.md, etc.) can be created as needed during development. The SPRINT-PLAN.md contains all story details. Individual files provide a workspace for tracking progress and adding implementation notes.
 
 **Template for individual stories:**
+
 ```markdown
 # Story X.Y: [Title]
 
@@ -129,19 +133,24 @@ A story is "Done" when:
 **Assignee:** [Developer Name]
 
 ## User Story
+
 As a [role], I want to [action], so that [benefit].
 
 ## Acceptance Criteria
+
 - [ ] Criterion 1
 - [ ] Criterion 2
 
 ## Technical Notes
+
 [Implementation guidance]
 
 ## Definition of Done
+
 [Standard DoD checklist]
 
 ## Related Stories
+
 [Dependencies and relationships]
 ```
 
