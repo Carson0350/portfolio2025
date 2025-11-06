@@ -11,11 +11,11 @@ technologies:
   - Azure
 featured: true
 status: completed
-startDate: 2022-03-01
-endDate: 2023-05-01
+startDate: '2022-03-01'
+endDate: '2023-05-01'
 liveUrl: ''
 githubUrl: ''
-imageUrl: /images/projects/sogeti-serverless.jpg
+imageUrl: /images/sogeti.jpg
 ---
 
 # Sogeti - Serverless Integration Platform
