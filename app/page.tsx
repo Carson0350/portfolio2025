@@ -9,13 +9,18 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import { Container, Section } from '@/components/ui/layout';
 
 export default function Home() {
   return (
     <main className="bg-neutral-50">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center pt-20">
-        <div className="max-w-container mx-auto px-container-padding-mobile md:px-container-padding">
+      <Section
+        as="div"
+        spacing="none"
+        className="min-h-screen flex items-center justify-center pt-20"
+      >
+        <Container>
           <div className="text-center space-y-8">
             <h1 className="text-h1-mobile md:text-h1 text-primary-800">
               Carson Antoine
@@ -54,31 +59,35 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* About Section */}
-      <section
+      <Section
         id="about"
-        className="min-h-screen flex items-center justify-center bg-white"
+        background="white"
+        className="min-h-screen flex items-center justify-center"
       >
-        <div className="max-w-container mx-auto px-container-padding-mobile md:px-container-padding py-section-mobile md:py-section">
+        <Container>
           <h2 className="text-h2-mobile md:text-h2 text-primary-800 mb-8">
             About
           </h2>
-          <p className="text-body-large text-neutral-700 max-w-container-narrow">
-            This is the About section. Navigation should highlight this section
-            when scrolled into view.
-          </p>
-        </div>
-      </section>
+          <Container size="narrow" padding={false}>
+            <p className="text-body-large text-neutral-700">
+              This is the About section. Navigation should highlight this
+              section when scrolled into view.
+            </p>
+          </Container>
+        </Container>
+      </Section>
 
       {/* Skills Section */}
-      <section
+      <Section
         id="skills"
-        className="min-h-screen flex items-center justify-center bg-neutral-50"
+        background="neutral"
+        className="min-h-screen flex items-center justify-center"
       >
-        <div className="max-w-container mx-auto px-container-padding-mobile md:px-container-padding py-section-mobile md:py-section">
+        <Container>
           <h2 className="text-h2-mobile md:text-h2 text-primary-800 mb-8">
             Skills
           </h2>
@@ -90,53 +99,56 @@ export default function Home() {
             <div className="bg-error-500 h-12 w-12 rounded-lg shadow-sm"></div>
             <div className="bg-info-500 h-12 w-12 rounded-lg shadow-sm"></div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Projects Section */}
-      <section
+      <Section
         id="projects"
-        className="min-h-screen flex items-center justify-center bg-white"
+        background="white"
+        className="min-h-screen flex items-center justify-center"
       >
-        <div className="max-w-container mx-auto px-container-padding-mobile md:px-container-padding py-section-mobile md:py-section">
+        <Container>
           <h2 className="text-h2-mobile md:text-h2 text-primary-800 mb-8">
             Projects
           </h2>
           <p className="text-body-large text-neutral-700">
             This is the Projects section.
           </p>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Experience Section */}
-      <section
+      <Section
         id="experience"
-        className="min-h-screen flex items-center justify-center bg-neutral-50"
+        background="neutral"
+        className="min-h-screen flex items-center justify-center"
       >
-        <div className="max-w-container mx-auto px-container-padding-mobile md:px-container-padding py-section-mobile md:py-section">
+        <Container>
           <h2 className="text-h2-mobile md:text-h2 text-primary-800 mb-8">
             Experience
           </h2>
           <p className="text-body-large text-neutral-700">
             This is the Experience section.
           </p>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Contact Section */}
-      <section
+      <Section
         id="contact"
-        className="min-h-screen flex items-center justify-center bg-white"
+        background="white"
+        className="min-h-screen flex items-center justify-center"
       >
-        <div className="max-w-container mx-auto px-container-padding-mobile md:px-container-padding py-section-mobile md:py-section">
+        <Container>
           <h2 className="text-h2-mobile md:text-h2 text-primary-800 mb-8">
             Contact
           </h2>
           <p className="text-body-large text-neutral-700">
             This is the Contact section.
           </p>
-        </div>
-      </section>
+        </Container>
+      </Section>
     </main>
   );
 }
