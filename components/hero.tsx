@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export function Hero() {
   const scrollToContact = () => {
@@ -176,18 +177,15 @@ export function Hero() {
               <div className="absolute -inset-4 bg-gradient-to-r from-accent-500 to-primary-500 rounded-full blur-2xl opacity-20"></div>
 
               {/* Image container */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center shadow-2xl border-8 border-white">
-                {/* Placeholder for headshot */}
-                <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex items-center justify-center">
-                    <span className="text-6xl font-bold text-white">CA</span>
-                  </div>
-                  <p className="text-sm text-neutral-600 font-medium">
-                    Professional headshot
-                    <br />
-                    coming soon
-                  </p>
-                </div>
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center shadow-2xl border-8 border-white overflow-hidden">
+                <Image
+                  src="/images/rootnot-creations-zT2RNiXf4a0-unsplash.jpg"
+                  alt="Professional headshot of Carson Antoine, Full Stack Developer"
+                  width={800}
+                  height={800}
+                  priority
+                  className="object-cover w-full h-full"
+                />
               </div>
 
               {/* Floating badge */}
