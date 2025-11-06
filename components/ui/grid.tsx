@@ -74,9 +74,9 @@ export const Grid = React.forwardRef<HTMLDivElement, GridProps>(
   ) => {
     return (
       <Component
-        ref={ref}
+        ref={ref as any}
         className={cn(gridVariants({ cols, gap, align, justify }), className)}
-        {...props}
+        {...(props as any)}
       />
     );
   }
@@ -131,9 +131,9 @@ export const GridItem = React.forwardRef<HTMLDivElement, GridItemProps>(
   ({ as: Component = 'div', colSpan, rowSpan, className, ...props }, ref) => {
     return (
       <Component
-        ref={ref}
+        ref={ref as any}
         className={cn(gridItemVariants({ colSpan, rowSpan }), className)}
-        {...props}
+        {...(props as any)}
       />
     );
   }

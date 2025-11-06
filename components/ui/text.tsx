@@ -62,7 +62,7 @@ export const Text = React.forwardRef<HTMLElement, TextProps>(
       <Component
         ref={ref as any}
         className={cn(textVariants({ size, variant, weight }), className)}
-        {...props}
+        {...(props as any)}
       />
     );
   }
