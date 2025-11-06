@@ -3,6 +3,7 @@
 import { Container } from '@/components/ui/container';
 import { Section } from '@/components/ui/section';
 import { Heading } from '@/components/ui/heading';
+import { ContactForm } from '@/components/contact-form';
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, MapPin } from 'lucide-react';
 
@@ -131,17 +132,13 @@ export function Contact() {
               </div>
             </motion.div>
 
-            {/* Right Column - Contact Form Placeholder */}
+            {/* Right Column - Contact Form */}
             <motion.div variants={itemVariants}>
-              <div className="bg-white rounded-2xl border border-neutral-200 p-8 h-full flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-neutral-600 mb-4">
-                    Contact form coming soon!
-                  </p>
-                  <p className="text-sm text-neutral-500">
-                    For now, please use the contact methods on the left.
-                  </p>
-                </div>
+              <div className="bg-white rounded-2xl border border-neutral-200 p-8">
+                <h3 className="text-2xl font-bold text-neutral-900 mb-6">
+                  Send a Message
+                </h3>
+                <ContactForm />
               </div>
             </motion.div>
           </div>
