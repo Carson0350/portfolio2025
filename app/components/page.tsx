@@ -8,6 +8,7 @@ import {
   CardContent,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Grid, GridItem } from '@/components/ui/grid';
 
 export default function ComponentLibrary() {
   return (
@@ -385,6 +386,130 @@ export default function ComponentLibrary() {
                 Info
               </Text>
             </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Grid System */}
+      <Section background="white">
+        <Container>
+          <Heading level="h2" className="mb-8">
+            Grid System
+          </Heading>
+
+          {/* 3 Column Grid */}
+          <div className="mb-12">
+            <Heading level="h4" className="mb-4">
+              3 Column Grid
+            </Heading>
+            <Grid cols={3} gap="md">
+              <Card>
+                <CardContent className="pt-6">
+                  <Text>Grid Item 1</Text>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <Text>Grid Item 2</Text>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <Text>Grid Item 3</Text>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <Text>Grid Item 4</Text>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <Text>Grid Item 5</Text>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <Text>Grid Item 6</Text>
+                </CardContent>
+              </Card>
+            </Grid>
+          </div>
+
+          {/* 4 Column Grid */}
+          <div className="mb-12">
+            <Heading level="h4" className="mb-4">
+              4 Column Grid
+            </Heading>
+            <Grid cols={4} gap="sm">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                <Card key={i} variant="bordered">
+                  <CardContent className="pt-6 text-center">
+                    <Text size="small">Item {i}</Text>
+                  </CardContent>
+                </Card>
+              ))}
+            </Grid>
+          </div>
+
+          {/* Column Spanning */}
+          <div className="mb-12">
+            <Heading level="h4" className="mb-4">
+              Column Spanning
+            </Heading>
+            <Grid cols={3} gap="md">
+              <GridItem colSpan={2}>
+                <Card variant="elevated">
+                  <CardContent className="pt-6">
+                    <Text weight="semibold">Spans 2 Columns</Text>
+                  </CardContent>
+                </Card>
+              </GridItem>
+              <GridItem>
+                <Card>
+                  <CardContent className="pt-6">
+                    <Text>Normal</Text>
+                  </CardContent>
+                </Card>
+              </GridItem>
+              <GridItem>
+                <Card>
+                  <CardContent className="pt-6">
+                    <Text>Normal</Text>
+                  </CardContent>
+                </Card>
+              </GridItem>
+              <GridItem>
+                <Card>
+                  <CardContent className="pt-6">
+                    <Text>Normal</Text>
+                  </CardContent>
+                </Card>
+              </GridItem>
+              <GridItem>
+                <Card>
+                  <CardContent className="pt-6">
+                    <Text>Normal</Text>
+                  </CardContent>
+                </Card>
+              </GridItem>
+            </Grid>
+          </div>
+
+          {/* Auto-Fit Grid */}
+          <div>
+            <Heading level="h4" className="mb-4">
+              Auto-Fit Grid
+            </Heading>
+            <Grid cols="auto" gap="lg">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Card key={i} hover="lift">
+                  <CardContent className="pt-6">
+                    <Text>Auto Item {i}</Text>
+                  </CardContent>
+                </Card>
+              ))}
+            </Grid>
           </div>
         </Container>
       </Section>
