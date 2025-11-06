@@ -3,7 +3,26 @@
 import { Container } from '@/components/ui/container';
 import { Section } from '@/components/ui/section';
 import { Heading } from '@/components/ui/heading';
+import { SkillBadge } from '@/components/ui/skill-badge';
 import { motion } from 'framer-motion';
+import {
+  Code2,
+  Braces,
+  FileCode,
+  Layers,
+  Palette,
+  Wind,
+  Database,
+  Server,
+  Globe,
+  Network,
+  Cloud,
+  Container as ContainerIcon,
+  GitBranch,
+  Workflow,
+  TestTube,
+  Users,
+} from 'lucide-react';
 
 export function Skills() {
   // Animation variants
@@ -32,40 +51,40 @@ export function Skills() {
     {
       title: 'Frontend',
       skills: [
-        'React',
-        'TypeScript',
-        'JavaScript',
-        'Next.js',
-        'HTML/CSS',
-        'Tailwind CSS',
-        'Redux',
-        'React Query',
+        { name: 'React', icon: Code2, highlighted: true },
+        { name: 'TypeScript', icon: Braces, highlighted: true },
+        { name: 'JavaScript', icon: FileCode },
+        { name: 'Next.js', icon: Layers, highlighted: true },
+        { name: 'HTML/CSS', icon: Palette },
+        { name: 'Tailwind CSS', icon: Wind },
+        { name: 'Redux', icon: Database },
+        { name: 'React Query', icon: Network },
       ],
     },
     {
       title: 'Backend',
       skills: [
-        '.NET',
-        'C#',
-        'Node.js',
-        'Python',
-        'Django',
-        'RESTful APIs',
-        'GraphQL',
-        'SQL',
+        { name: '.NET', icon: Server, highlighted: true },
+        { name: 'C#', icon: Braces, highlighted: true },
+        { name: 'Node.js', icon: Globe },
+        { name: 'Python', icon: FileCode },
+        { name: 'Django', icon: Server },
+        { name: 'RESTful APIs', icon: Network },
+        { name: 'GraphQL', icon: Network },
+        { name: 'SQL', icon: Database },
       ],
     },
     {
       title: 'Tools & Other',
       skills: [
-        'Azure',
-        'Docker',
-        'Git',
-        'CI/CD',
-        'PostgreSQL',
-        'MongoDB',
-        'Agile/Scrum',
-        'Testing',
+        { name: 'Azure', icon: Cloud, highlighted: true },
+        { name: 'Docker', icon: ContainerIcon },
+        { name: 'Git', icon: GitBranch },
+        { name: 'CI/CD', icon: Workflow },
+        { name: 'PostgreSQL', icon: Database },
+        { name: 'MongoDB', icon: Database },
+        { name: 'Agile/Scrum', icon: Users },
+        { name: 'Testing', icon: TestTube },
       ],
     },
   ];
@@ -104,24 +123,19 @@ export function Skills() {
                 </h3>
 
                 {/* Skills Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div
+                  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+                  role="list"
+                  aria-label={`${category.title} skills`}
+                >
                   {category.skills.map((skill, skillIndex) => (
-                    <motion.div
-                      key={skill}
-                      className="flex items-center justify-center p-4 bg-white rounded-xl border border-neutral-200 hover:border-accent-300 hover:shadow-md transition-all"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{
-                        delay: categoryIndex * 0.2 + skillIndex * 0.05,
-                        duration: 0.4,
-                      }}
-                      whileHover={{ scale: 1.05, y: -4 }}
-                    >
-                      <span className="text-sm font-medium text-neutral-700 text-center">
-                        {skill}
-                      </span>
-                    </motion.div>
+                    <SkillBadge
+                      key={skill.name}
+                      name={skill.name}
+                      icon={skill.icon}
+                      variant={skill.highlighted ? 'highlighted' : 'default'}
+                      delay={categoryIndex * 0.2 + skillIndex * 0.05}
+                    />
                   ))}
                 </div>
               </motion.div>
