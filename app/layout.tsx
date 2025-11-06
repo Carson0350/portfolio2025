@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
+import { Navigation } from '@/components/navigation';
+import { Footer } from '@/components/footer';
 import './globals.css';
 
 const inter = Inter({
@@ -55,8 +57,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${inter.variable} scroll-smooth`}>
+      <body className={inter.className}>
+        <Navigation />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
