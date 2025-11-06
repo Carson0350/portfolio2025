@@ -1,6 +1,7 @@
 import { Hero } from '@/components/hero';
 import { About } from '@/components/about';
 import { Skills } from '@/components/skills';
+import { Experience } from '@/components/experience';
 import { Container, Section } from '@/components/ui/layout';
 import { getBio } from '@/lib/content';
 
@@ -35,20 +36,7 @@ export default function Home() {
       </Section>
 
       {/* Experience Section */}
-      <Section
-        id="experience"
-        background="neutral"
-        className="min-h-screen flex items-center justify-center"
-      >
-        <Container>
-          <h2 className="text-h2-mobile md:text-h2 text-primary-800 mb-8">
-            Experience
-          </h2>
-          <p className="text-body-large text-neutral-700">
-            This is the Experience section.
-          </p>
-        </Container>
-      </Section>
+      <Experience />
 
       {/* Contact Section */}
       <Section
