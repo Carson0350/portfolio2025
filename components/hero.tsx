@@ -214,16 +214,25 @@ export function Hero() {
       </Container>
 
       {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      <motion.button
+        onClick={() => {
+          const aboutSection = document.getElementById('about');
+          if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer hover:scale-110 transition-transform"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.6 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        aria-label="Scroll to About section"
       >
         <div className="w-6 h-10 border-2 border-neutral-400 rounded-full flex justify-center animate-bounce">
           <div className="w-1 h-3 bg-neutral-400 rounded-full mt-2 animate-pulse"></div>
         </div>
-      </motion.div>
+      </motion.button>
     </section>
   );
 }
