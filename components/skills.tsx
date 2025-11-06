@@ -4,25 +4,8 @@ import { Container } from '@/components/ui/container';
 import { Section } from '@/components/ui/section';
 import { Heading } from '@/components/ui/heading';
 import { SkillBadge } from '@/components/ui/skill-badge';
+import { skillsData } from '@/lib/data/skills';
 import { motion } from 'framer-motion';
-import {
-  Code2,
-  Braces,
-  FileCode,
-  Layers,
-  Palette,
-  Wind,
-  Database,
-  Server,
-  Globe,
-  Network,
-  Cloud,
-  Container as ContainerIcon,
-  GitBranch,
-  Workflow,
-  TestTube,
-  Users,
-} from 'lucide-react';
 
 export function Skills() {
   // Animation variants
@@ -47,48 +30,6 @@ export function Skills() {
     },
   };
 
-  const skillCategories = [
-    {
-      title: 'Frontend',
-      skills: [
-        { name: 'React', icon: Code2, highlighted: true },
-        { name: 'TypeScript', icon: Braces, highlighted: true },
-        { name: 'JavaScript', icon: FileCode },
-        { name: 'Next.js', icon: Layers, highlighted: true },
-        { name: 'HTML/CSS', icon: Palette },
-        { name: 'Tailwind CSS', icon: Wind },
-        { name: 'Redux', icon: Database },
-        { name: 'React Query', icon: Network },
-      ],
-    },
-    {
-      title: 'Backend',
-      skills: [
-        { name: '.NET', icon: Server, highlighted: true },
-        { name: 'C#', icon: Braces, highlighted: true },
-        { name: 'Node.js', icon: Globe },
-        { name: 'Python', icon: FileCode },
-        { name: 'Django', icon: Server },
-        { name: 'RESTful APIs', icon: Network },
-        { name: 'GraphQL', icon: Network },
-        { name: 'SQL', icon: Database },
-      ],
-    },
-    {
-      title: 'Tools & Other',
-      skills: [
-        { name: 'Azure', icon: Cloud, highlighted: true },
-        { name: 'Docker', icon: ContainerIcon },
-        { name: 'Git', icon: GitBranch },
-        { name: 'CI/CD', icon: Workflow },
-        { name: 'PostgreSQL', icon: Database },
-        { name: 'MongoDB', icon: Database },
-        { name: 'Agile/Scrum', icon: Users },
-        { name: 'Testing', icon: TestTube },
-      ],
-    },
-  ];
-
   return (
     <Section id="skills" background="neutral" className="py-20 lg:py-32">
       <Container>
@@ -111,7 +52,7 @@ export function Skills() {
 
           {/* Skills Categories */}
           <div className="space-y-12">
-            {skillCategories.map((category, categoryIndex) => (
+            {skillsData.map((category, categoryIndex) => (
               <motion.div
                 key={category.title}
                 variants={itemVariants}
@@ -133,7 +74,7 @@ export function Skills() {
                       key={skill.name}
                       name={skill.name}
                       icon={skill.icon}
-                      variant={skill.highlighted ? 'highlighted' : 'default'}
+                      variant={skill.featured ? 'highlighted' : 'default'}
                       delay={categoryIndex * 0.2 + skillIndex * 0.05}
                     />
                   ))}
