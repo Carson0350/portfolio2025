@@ -4,7 +4,18 @@ import { Container } from '@/components/ui/container';
 import { Section } from '@/components/ui/section';
 import { Heading } from '@/components/ui/heading';
 import { motion } from 'framer-motion';
-import { Code2, Lightbulb, Users, Zap } from 'lucide-react';
+import {
+  Code2,
+  Lightbulb,
+  Users,
+  Zap,
+  Mountain,
+  Tent,
+  Snowflake,
+  Gamepad2,
+  Disc,
+  Flag,
+} from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -219,6 +230,53 @@ export function About({ bio }: AboutProps) {
                 </div>
               </motion.div>
             ))}
+          </motion.div>
+
+          {/* When I'm Not Coding Section */}
+          <motion.div className="mt-16" variants={itemVariants}>
+            <h3 className="text-2xl font-bold text-neutral-900 mb-6 text-center">
+              When I'm Not Coding
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {[
+                { icon: Mountain, label: 'Hiking', color: 'text-green-600' },
+                { icon: Tent, label: 'Camping', color: 'text-orange-600' },
+                {
+                  icon: Snowflake,
+                  label: 'Snow Skiing',
+                  color: 'text-blue-600',
+                },
+                {
+                  icon: Gamepad2,
+                  label: 'Video Games',
+                  color: 'text-purple-600',
+                },
+                { icon: Disc, label: 'Disc Golf', color: 'text-yellow-600' },
+                { icon: Flag, label: 'F1 Racing', color: 'text-red-600' },
+              ].map((hobby, index) => {
+                const Icon = hobby.icon;
+                return (
+                  <motion.div
+                    key={hobby.label}
+                    className="flex flex-col items-center gap-3 p-4 bg-white rounded-xl border border-neutral-200 hover:border-accent-300 hover:shadow-md transition-all"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                    whileHover={{ scale: 1.05, y: -4 }}
+                  >
+                    <div
+                      className={`w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center ${hobby.color}`}
+                    >
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <span className="text-sm font-medium text-neutral-700 text-center">
+                      {hobby.label}
+                    </span>
+                  </motion.div>
+                );
+              })}
+            </div>
           </motion.div>
         </motion.div>
       </Container>
