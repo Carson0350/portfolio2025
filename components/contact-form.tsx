@@ -2,17 +2,30 @@
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Send } from 'lucide-react';
 
-interface ContactFormData {
-  name: string;
-  email: string;
-  message: string;
-}
+// Zod validation schema
+const contactFormSchema = z.object({
+  name: z
+    .string()
+    .min(1, 'Name is required')
+    .min(2, 'Name must be at least 2 characters')
+    .max(100, 'Name must be less than 100 characters'),
+  email: z.string().min(1, 'Email is required').email('Invalid email address'),
+  message: z
+    .string()
+    .min(1, 'Message is required')
+    .min(10, 'Message must be at least 10 characters')
+    .max(1000, 'Message must be less than 1000 characters'),
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,9 +33,12 @@ export function ContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid, isDirty },
     reset,
-  } = useForm<ContactFormData>();
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+    mode: 'onChange', // Enable real-time validation
+  });
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
@@ -49,13 +65,7 @@ export function ContactForm() {
           id="name"
           type="text"
           placeholder="Your name"
-          {...register('name', {
-            required: 'Name is required',
-            minLength: {
-              value: 2,
-              message: 'Name must be at least 2 characters',
-            },
-          })}
+          {...register('name')}
           aria-invalid={errors.name ? 'true' : 'false'}
           aria-describedby={errors.name ? 'name-error' : undefined}
         />
@@ -75,13 +85,7 @@ export function ContactForm() {
           id="email"
           type="email"
           placeholder="your.email@example.com"
-          {...register('email', {
-            required: 'Email is required',
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: 'Invalid email address',
-            },
-          })}
+          {...register('email')}
           aria-invalid={errors.email ? 'true' : 'false'}
           aria-describedby={errors.email ? 'email-error' : undefined}
         />
@@ -101,13 +105,7 @@ export function ContactForm() {
           id="message"
           placeholder="Tell me about your project or opportunity..."
           rows={6}
-          {...register('message', {
-            required: 'Message is required',
-            minLength: {
-              value: 10,
-              message: 'Message must be at least 10 characters',
-            },
-          })}
+          {...register('message')}
           aria-invalid={errors.message ? 'true' : 'false'}
           aria-describedby={errors.message ? 'message-error' : undefined}
         />
@@ -121,7 +119,7 @@ export function ContactForm() {
       {/* Submit Button */}
       <Button
         type="submit"
-        disabled={isSubmitting}
+        disabled={isSubmitting || !isValid || !isDirty}
         className="w-full"
         size="lg"
       >
