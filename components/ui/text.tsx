@@ -30,7 +30,6 @@ const textVariants = cva('', {
   defaultVariants: {
     size: 'base',
     variant: 'default',
-    weight: 'normal',
   },
 });
 
