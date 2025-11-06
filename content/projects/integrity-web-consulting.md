@@ -13,8 +13,8 @@ technologies:
   - Auth0
 featured: true
 status: completed
-startDate: 2023-06-01
-endDate: 2024-12-01
+startDate: '2023-06-01'
+endDate: '2024-12-01'
 liveUrl: ''
 githubUrl: ''
 imageUrl: /images/projects/integrity-web-consulting.jpg
