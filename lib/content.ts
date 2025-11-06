@@ -60,9 +60,14 @@ export function getBio(): Bio | null {
       return null;
     }
 
+    const firstFile = files[0];
+    if (!firstFile) {
+      return null;
+    }
+
     // Use the first bio file found (typically bio.md)
-    const slug = files[0].replace(/\.md$/, '');
-    const filePath = path.join(bioDirectory, files[0]);
+    const slug = firstFile.replace(/\.md$/, '');
+    const filePath = path.join(bioDirectory, firstFile);
 
     const rawData = parseMarkdownFile<Bio>(filePath, slug);
     if (!rawData) return null;
