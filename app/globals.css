@@ -146,10 +146,29 @@
 }
 
 @layer base {
+  /* Base HTML elements */
+  * {
+    border-color: theme('colors.neutral.200');
+  }
+
   body {
     font-family: var(--font-family-sans);
+    color: theme('colors.neutral.900');
+    background-color: theme('colors.neutral.50');
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus visible styles */
+  *:focus-visible {
+    outline: 2px solid theme('colors.accent.500');
+    outline-offset: 2px;
+    border-radius: 0.125rem;
   }
 }
 
@@ -236,5 +255,60 @@
     font-size: var(--font-size-tiny);
     line-height: 1.4;
     font-weight: 500;
+  }
+
+  /* Common layout utilities */
+  .container-padding {
+    padding-left: var(--spacing-container-padding-mobile);
+    padding-right: var(--spacing-container-padding-mobile);
+  }
+
+  @media (min-width: 768px) {
+    .container-padding {
+      padding-left: var(--spacing-container-padding);
+      padding-right: var(--spacing-container-padding);
+    }
+  }
+
+  .section-padding-y {
+    padding-top: var(--spacing-section-mobile);
+    padding-bottom: var(--spacing-section-mobile);
+  }
+
+  @media (min-width: 768px) {
+    .section-padding-y {
+      padding-top: var(--spacing-section);
+      padding-bottom: var(--spacing-section);
+    }
+  }
+
+  /* Focus ring utility - consistent across all interactive elements */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2;
+  }
+
+  /* Card shadow utilities */
+  .shadow-card {
+    box-shadow:
+      0 4px 6px -1px rgb(0 0 0 / 0.07),
+      0 2px 4px -1px rgb(0 0 0 / 0.06);
+  }
+
+  .shadow-card-hover {
+    box-shadow:
+      0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -2px rgb(0 0 0 / 0.05);
+  }
+
+  /* Transition utilities */
+  .transition-smooth {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .transition-colors-smooth {
+    transition:
+      color 0.2s ease-in-out,
+      background-color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
   }
 }
