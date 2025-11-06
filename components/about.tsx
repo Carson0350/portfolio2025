@@ -5,6 +5,8 @@ import { Section } from '@/components/ui/section';
 import { Heading } from '@/components/ui/heading';
 import { motion } from 'framer-motion';
 import { Code2, Lightbulb, Users, Zap } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface AboutProps {
   bio?: {
@@ -83,86 +85,112 @@ export function About({ bio }: AboutProps) {
             )}
           </motion.div>
 
-          {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-16">
-            {/* Bio Content */}
-            <motion.div variants={itemVariants}>
-              <div className="prose prose-lg max-w-none">
-                {bio?.content ? (
-                  // Split content into paragraphs and render
-                  bio.content.split('\n\n').map((paragraph, index) => {
-                    // Check if it's a heading
-                    if (paragraph.startsWith('# ')) {
-                      return (
-                        <h3
-                          key={index}
-                          className="text-2xl font-bold text-neutral-900 mt-8 mb-4"
-                        >
-                          {paragraph.replace('# ', '')}
-                        </h3>
-                      );
-                    }
-                    if (paragraph.startsWith('## ')) {
-                      return (
-                        <h4
-                          key={index}
-                          className="text-xl font-semibold text-neutral-800 mt-6 mb-3"
-                        >
-                          {paragraph.replace('## ', '')}
-                        </h4>
-                      );
-                    }
-                    // Regular paragraph
-                    return (
-                      <p
-                        key={index}
-                        className="text-neutral-700 leading-relaxed mb-4"
-                      >
-                        {paragraph}
+          {/* Bio Content - Full Width Card Style */}
+          <motion.div className="space-y-4 mb-12" variants={itemVariants}>
+            {bio?.content ? (
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  // Custom paragraph component - each in a card
+                  p: ({ children }) => (
+                    <div className="p-6 bg-neutral-50 rounded-xl border border-neutral-200">
+                      <p className="text-neutral-700 leading-relaxed">
+                        {children}
                       </p>
-                    );
-                  })
-                ) : (
-                  <p className="text-neutral-700 leading-relaxed">
-                    Full Stack Developer with a passion for creating elegant,
-                    efficient, and user-friendly web applications.
-                  </p>
-                )}
+                    </div>
+                  ),
+                  // Custom heading components
+                  h2: ({ children }) => (
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-4 mt-8 first:mt-0">
+                      {children}
+                    </h3>
+                  ),
+                  h3: ({ children }) => (
+                    <h4 className="text-xl font-semibold text-neutral-800 mb-3 mt-6">
+                      {children}
+                    </h4>
+                  ),
+                  // Custom link component - open external links in new tab
+                  a: (props) => (
+                    <a
+                      {...props}
+                      className="text-accent-600 hover:underline font-medium"
+                      target={
+                        props.href?.startsWith('http') ? '_blank' : undefined
+                      }
+                      rel={
+                        props.href?.startsWith('http')
+                          ? 'noopener noreferrer'
+                          : undefined
+                      }
+                    />
+                  ),
+                  // Custom strong component
+                  strong: ({ children }) => (
+                    <strong className="font-semibold text-neutral-900">
+                      {children}
+                    </strong>
+                  ),
+                  // Custom list components
+                  ul: ({ children }) => (
+                    <div className="p-6 bg-neutral-50 rounded-xl border border-neutral-200">
+                      <ul className="space-y-2">{children}</ul>
+                    </div>
+                  ),
+                  li: ({ children }) => (
+                    <li className="text-neutral-700 leading-relaxed flex items-start">
+                      <span className="text-accent-500 mr-2">•</span>
+                      <span>{children}</span>
+                    </li>
+                  ),
+                }}
+              >
+                {bio.content}
+              </ReactMarkdown>
+            ) : (
+              <div className="p-6 bg-neutral-50 rounded-xl border border-neutral-200">
+                <p className="text-neutral-700 leading-relaxed">
+                  Full Stack Developer with a passion for creating elegant,
+                  efficient, and user-friendly web applications.
+                </p>
               </div>
-            </motion.div>
+            )}
+          </motion.div>
 
-            {/* Highlights Cards */}
-            <motion.div className="space-y-4" variants={itemVariants}>
-              {highlights.map((highlight, index) => {
-                const Icon = highlight.icon;
-                return (
-                  <motion.div
-                    key={highlight.title}
-                    className="flex gap-4 p-6 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-accent-300 hover:shadow-md transition-all"
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                    whileHover={{ scale: 1.02, y: -2 }}
-                  >
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-lg bg-accent-100 flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-accent-600" />
-                      </div>
+          {/* Highlights Cards - Grid Below */}
+          <motion.div
+            className="grid md:grid-cols-2 gap-4 mb-16"
+            variants={itemVariants}
+          >
+            {highlights.map((highlight, index) => {
+              const Icon = highlight.icon;
+              return (
+                <motion.div
+                  key={highlight.title}
+                  className="flex gap-4 p-6 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-accent-300 hover:shadow-md transition-all"
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  whileHover={{ scale: 1.02, y: -2 }}
+                >
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-accent-100 flex items-center justify-center">
+                      <Icon className="w-6 h-6 text-accent-600" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-neutral-900 mb-1">
-                        {highlight.title}
-                      </h4>
-                      <p className="text-sm text-neutral-600">
-                        {highlight.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-          </div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-neutral-900 mb-1">
+                      {highlight.title}
+                    </h4>
+                    <p className="text-sm text-neutral-600">
+                      {highlight.description}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
 
           {/* Stats Row */}
           <motion.div
