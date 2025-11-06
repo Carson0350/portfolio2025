@@ -23,6 +23,7 @@ const socialLinks = [
 ];
 
 const footerLinks = [
+  { name: 'Components', href: '/components' },
   { name: 'Privacy', href: '/privacy' },
   { name: 'Terms', href: '/terms' },
 ];
