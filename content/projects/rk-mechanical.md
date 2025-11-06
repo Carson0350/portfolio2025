@@ -17,7 +17,7 @@ startDate: '2021-01-01'
 endDate: '2022-12-01'
 liveUrl: ''
 githubUrl: ''
-imageUrl: /images/projects/rk-mechanical.jpg
+imageUrl: /images/Rk.jpg
 ---
 
 # RK Mechanical - Enterprise Inventory Management System

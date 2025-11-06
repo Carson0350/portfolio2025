@@ -17,7 +17,7 @@ startDate: '2023-06-01'
 endDate: '2024-12-01'
 liveUrl: ''
 githubUrl: ''
-imageUrl: /images/projects/integrity-web-consulting.jpg
+imageUrl: /images/integrity.jpg
 ---
 
 # Integrity Web Consulting - Enterprise Web Solutions

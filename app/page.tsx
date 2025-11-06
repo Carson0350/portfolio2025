@@ -8,7 +8,7 @@ import { getBio, getFeaturedProjects } from '@/lib/content';
 
 export default function Home() {
   const bio = getBio();
-  const featuredProjects = getFeaturedProjects();
+  const featuredProjects = getFeaturedProjects(4);
 
   return (
     <main className="bg-neutral-50">

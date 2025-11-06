@@ -10,6 +10,7 @@ featured: true
 status: in-progress
 startDate: '2025-11-01'
 githubUrl: https://github.com/Carson0350/portfolio2025
+imageUrl: /images/rootnot-creations-zT2RNiXf4a0-unsplash.jpg
 ---
 
 # Personal Portfolio Website
