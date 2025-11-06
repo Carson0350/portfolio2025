@@ -3,7 +3,7 @@ import { About } from '@/components/about';
 import { Skills } from '@/components/skills';
 import { Experience } from '@/components/experience';
 import { Projects } from '@/components/projects';
-import { Container, Section } from '@/components/ui/layout';
+import { Contact } from '@/components/contact';
 import { getBio, getFeaturedProjects } from '@/lib/content';
 
 export default function Home() {
@@ -28,20 +28,7 @@ export default function Home() {
       <Experience />
 
       {/* Contact Section */}
-      <Section
-        id="contact"
-        background="white"
-        className="min-h-screen flex items-center justify-center"
-      >
-        <Container>
-          <h2 className="text-h2-mobile md:text-h2 text-primary-800 mb-8">
-            Contact
-          </h2>
-          <p className="text-body-large text-neutral-700">
-            This is the Contact section.
-          </p>
-        </Container>
-      </Section>
+      <Contact />
     </main>
   );
 }
