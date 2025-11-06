@@ -1,67 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import {
+  type Bio,
+  type Project,
+  type Experience,
+  validateBio,
+  validateProject,
+  validateExperience,
+} from './schemas';
 
 // Content directory paths
 const contentDirectory = path.join(process.cwd(), 'content');
 const bioDirectory = path.join(contentDirectory, 'bio');
 const projectsDirectory = path.join(contentDirectory, 'projects');
 const experienceDirectory = path.join(contentDirectory, 'experience');
-
-/**
- * Bio content type
- */
-export interface Bio {
-  slug: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  metadata?: {
-    lastUpdated?: string;
-    [key: string]: any;
-  };
-}
-
-/**
- * Project content type
- */
-export interface Project {
-  slug: string;
-  title: string;
-  description: string;
-  content: string;
-  technologies: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-  imageUrl?: string;
-  featured?: boolean;
-  startDate?: string;
-  endDate?: string;
-  status?: 'completed' | 'in-progress' | 'archived';
-  metadata?: {
-    [key: string]: any;
-  };
-}
-
-/**
- * Experience content type
- */
-export interface Experience {
-  slug: string;
-  company: string;
-  position: string;
-  content: string;
-  startDate: string;
-  endDate?: string;
-  current?: boolean;
-  location?: string;
-  companyUrl?: string;
-  technologies?: string[];
-  achievements?: string[];
-  metadata?: {
-    [key: string]: any;
-  };
-}
 
 /**
  * Generic content parser
@@ -111,7 +64,17 @@ export function getBio(): Bio | null {
     const slug = files[0].replace(/\.md$/, '');
     const filePath = path.join(bioDirectory, files[0]);
 
-    return parseMarkdownFile<Bio>(filePath, slug);
+    const rawData = parseMarkdownFile<Bio>(filePath, slug);
+    if (!rawData) return null;
+
+    // Validate the parsed data
+    const validation = validateBio(rawData);
+    if (!validation.success) {
+      console.error(`Bio validation failed:`, validation.error);
+      return null;
+    }
+
+    return validation.data;
   } catch (error) {
     console.error('Error getting bio:', error);
     return null;
@@ -129,7 +92,21 @@ export function getAllProjects(): Project[] {
       .map((file) => {
         const slug = file.replace(/\.md$/, '');
         const filePath = path.join(projectsDirectory, file);
-        return parseMarkdownFile<Project>(filePath, slug);
+        const rawData = parseMarkdownFile<Project>(filePath, slug);
+
+        if (!rawData) return null;
+
+        // Validate the parsed data
+        const validation = validateProject(rawData);
+        if (!validation.success) {
+          console.error(
+            `Project validation failed for ${slug}:`,
+            validation.error
+          );
+          return null;
+        }
+
+        return validation.data;
       })
       .filter((project): project is Project => project !== null);
 
@@ -175,7 +152,21 @@ export function getAllExperience(): Experience[] {
       .map((file) => {
         const slug = file.replace(/\.md$/, '');
         const filePath = path.join(experienceDirectory, file);
-        return parseMarkdownFile<Experience>(filePath, slug);
+        const rawData = parseMarkdownFile<Experience>(filePath, slug);
+
+        if (!rawData) return null;
+
+        // Validate the parsed data
+        const validation = validateExperience(rawData);
+        if (!validation.success) {
+          console.error(
+            `Experience validation failed for ${slug}:`,
+            validation.error
+          );
+          return null;
+        }
+
+        return validation.data;
       })
       .filter((exp): exp is Experience => exp !== null);
 
