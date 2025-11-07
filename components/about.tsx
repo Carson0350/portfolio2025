@@ -111,10 +111,15 @@ export function About({ bio }: AboutProps) {
                     </div>
                   ),
                   // Custom heading components
-                  h2: ({ children }) => (
-                    <h3 className="text-2xl font-bold text-neutral-900 mb-4 mt-8 first:mt-0">
+                  h1: ({ children }) => (
+                    <h2 className="text-3xl font-bold text-neutral-900 leading-tight mb-6 mt-10 first:mt-0">
                       {children}
-                    </h3>
+                    </h2>
+                  ),
+                  h2: ({ children }) => (
+                    <h2 className="text-3xl font-bold text-neutral-900 leading-tight mb-6 mt-10 first:mt-0">
+                      {children}
+                    </h2>
                   ),
                   h3: ({ children }) => (
                     <h4 className="text-xl font-semibold text-neutral-800 mb-3 mt-6">
