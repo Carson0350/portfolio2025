@@ -179,7 +179,7 @@ export function Hero() {
               {/* Image container */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center shadow-2xl border-8 border-white overflow-hidden">
                 <Image
-                  src="/images/rootnot-creations-zT2RNiXf4a0-unsplash.jpg"
+                  src="/images/9e5b0345278c69c6.jpeg"
                   alt="Professional headshot of Carson Antoine, Full Stack Developer"
                   width={800}
                   height={800}
